@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bd8mtaq7gm53"]
+[gd_scene load_steps=27 format=3 uid="uid://bd8mtaq7gm53"]
 
 [ext_resource type="Script" path="res://Game/Menu/Menus/title_screen.gd" id="1_xuk05"]
 [ext_resource type="VideoStream" path="res://Game/Menu/Texture/Video/render1.ogv" id="2_ag73m"]
@@ -12,6 +12,7 @@
 [ext_resource type="Shader" path="res://Game/Menu/Shader/blur.gdshader" id="6_sdl0m"]
 [ext_resource type="Texture2D" uid="uid://qr7cw85m8s11" path="res://Game/Menu/Texture/ReplayImages/demo_scene.tscn - Grabpack In Godot - Godot Engine 2024-09-08 9_38_53 AM.png" id="7_cyas4"]
 [ext_resource type="Script" path="res://Game/Menu/Menus/replay_encounterc2.gd" id="7_kw4i5"]
+[ext_resource type="Script" path="res://Game/Menu/Menus/newgame.gd" id="8_dio0e"]
 [ext_resource type="Script" path="res://Game/Menu/CustomButtons/replaybutton2.gd" id="8_hkorf"]
 [ext_resource type="Texture2D" uid="uid://bju8f3r3p6lu4" path="res://Game/Menu/Texture/ReplayImages/demo_scene.tscn - Grabpack In Godot - Godot Engine 2024-09-08 9_54_36 AM.png" id="9_5vurl"]
 [ext_resource type="PackedScene" uid="uid://umft1vb3u8io" path="res://Game/Menu/Menus/settings.tscn" id="11_y85ln"]
@@ -293,6 +294,8 @@ theme = ExtResource("3_8ihiw")
 theme_override_font_sizes/font_size = 22
 text = "NEW GAME"
 alignment = 0
+script = ExtResource("8_dio0e")
+game = "res://Maps/Chapter1/c1-1.tscn"
 
 [node name="replay" type="Button" parent="buttons"]
 layout_mode = 1
