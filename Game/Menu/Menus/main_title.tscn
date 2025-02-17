@@ -1,9 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://br24oca6yewg1"]
+[gd_scene load_steps=29 format=3 uid="uid://br24oca6yewg1"]
 
 [ext_resource type="Script" path="res://Game/Menu/Menus/main_title.gd" id="1_1iey1"]
 [ext_resource type="VideoStream" path="res://Game/Menu/Texture/Video/render1.ogv" id="2_f6xkw"]
 [ext_resource type="Shader" path="res://Game/Menu/Shader/vcr_pause.gdshader" id="3_e417y"]
-[ext_resource type="AudioStream" uid="uid://dkpntqt8iqxug" path="res://Game/Menu/SFX/Music/02. Chapter 3 Title Screen.mp3" id="4_0wrdt"]
+[ext_resource type="AudioStream" uid="uid://c5kjmeb86i1u3" path="res://Game/Menu/theme/whemenu.mp3" id="4_cmuj6"]
 [ext_resource type="Theme" uid="uid://dv4qrnr0ds2w6" path="res://Game/Menu/theme/menu.tres" id="6_m5i1f"]
 [ext_resource type="Script" path="res://Game/Menu/Menus/replay_encounter.gd" id="7_vsx4s"]
 [ext_resource type="Shader" path="res://Game/Menu/Shader/blur.gdshader" id="8_j7jel"]
@@ -11,7 +11,13 @@
 [ext_resource type="Script" path="res://Game/Menu/CustomButtons/replaybutton.gd" id="10_jglre"]
 [ext_resource type="Texture2D" uid="uid://bju8f3r3p6lu4" path="res://Game/Menu/Texture/ReplayImages/demo_scene.tscn - Grabpack In Godot - Godot Engine 2024-09-08 9_54_36 AM.png" id="11_kieh4"]
 [ext_resource type="PackedScene" uid="uid://umft1vb3u8io" path="res://Game/Menu/Menus/settings.tscn" id="12_x6noy"]
+[ext_resource type="PackedScene" uid="uid://bjhse55dlsf0a" path="res://Item/Grabpack/playwatch.tscn" id="13_ghsen"]
 [ext_resource type="Script" path="res://Game/Menu/SFX/btn_sfx.gd" id="13_xot04"]
+[ext_resource type="PackedScene" uid="uid://cux068o67jh01" path="res://Item/Grabpack/Hands/hand_item.tscn" id="14_hh5yh"]
+[ext_resource type="PackedScene" uid="uid://cu72dk6n7aaco" path="res://Item/Grabpack/grabpack_item.tscn" id="15_gbarv"]
+[ext_resource type="PackedScene" uid="uid://bghr8effdjgcs" path="res://Puzzle/Race Car/racecar.tscn" id="16_0ss7l"]
+[ext_resource type="PackedScene" uid="uid://dbidsa4wtpsi8" path="res://Puzzle/Purple Pad/purple_panel.tscn" id="17_6dso1"]
+[ext_resource type="PackedScene" uid="uid://bj8oeqdjcnfts" path="res://Puzzle/Dash Panel/dash_panel.tscn" id="18_l558f"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_gu1im"]
 noise_type = 2
@@ -162,6 +168,7 @@ grow_vertical = 2
 script = ExtResource("1_1iey1")
 
 [node name="menu_bg_video" type="VideoStreamPlayer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -183,8 +190,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="menu_music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_0wrdt")
-volume_db = -15.0
+stream = ExtResource("4_cmuj6")
+volume_db = 11.691
 autoplay = true
 
 [node name="chapter" type="Label" parent="."]
@@ -469,6 +476,7 @@ level_path = "res://Level/test.tscn"
 image = ExtResource("11_kieh4")
 
 [node name="HSeparator" type="HSeparator" parent="replay_encounter"]
+visible = false
 layout_mode = 0
 offset_left = 510.0
 offset_top = 518.0
@@ -491,6 +499,54 @@ root_path = NodePath("../buttons")
 [node name="ButtonSFXPlayer2" type="Node" parent="."]
 script = ExtResource("13_xot04")
 root_path = NodePath("../replay_encounter")
+
+[node name="playwatch" parent="." instance=ExtResource("13_ghsen")]
+transform = Transform3D(1, 0, 0, 0, -0.199436, -0.979911, 0, 0.979911, -0.199436, 0.0823237, 0.309565, -0.0397665)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.999847, -0.0175222, 0, 0.0175222, 0.999847, 0.0823237, 0.00664175, 2.3555)
+fov = 34.0
+
+[node name="Collectable Hand" parent="." instance=ExtResource("14_hh5yh")]
+transform = Transform3D(-0.553118, 0.832946, -0.0161793, -0.0854613, -0.0374111, 0.995639, 0.828708, 0.552089, 0.0918774, -0.600967, -0.0167833, 0.36481)
+hand = 0
+
+[node name="Collectable Hand2" parent="." instance=ExtResource("14_hh5yh")]
+transform = Transform3D(-0.929263, 0.365657, -0.0525875, -0.00493201, 0.130059, 0.991494, 0.369387, 0.921618, -0.119056, -0.236036, 0.205467, 0.1301)
+
+[node name="Collectable Hand3" parent="." instance=ExtResource("14_hh5yh")]
+transform = Transform3D(-0.999985, 0, -0.00555003, -0.00554984, 0.00816809, 0.999951, 4.53331e-05, 0.999967, -0.00816796, 0.121912, -0.0151672, 0.0599602)
+hand = 2
+
+[node name="Collectable Hand4" parent="." instance=ExtResource("14_hh5yh")]
+transform = Transform3D(0.374826, -0.927059, 0.00812365, -0.0123041, 0.00378735, 0.999917, -0.927013, -0.374895, -0.009987, 0.535328, 0.183104, 0.0768833)
+hand = 3
+
+[node name="Collectable Hand5" parent="." instance=ExtResource("14_hh5yh")]
+transform = Transform3D(-0.692444, -0.721462, 0.00375874, 0.0132288, -0.00748739, 0.999884, -0.721351, 0.692414, 0.0147286, 0.75725, -0.00438882, 0.345128)
+hand = 4
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.999774, 0.0212391, 0, -0.0212391, 0.999774, 0.0823237, -0.00865045, 1.57251)
+spot_range = 178.627
+spot_attenuation = -1.05
+spot_angle = 60.14
+
+[node name="Grabpack Item" parent="." instance=ExtResource("15_gbarv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.214516, 0, -0.0867537)
+
+[node name="Grabpack Item2" parent="." instance=ExtResource("15_gbarv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.469794, 0.609002, -0.481013)
+pack = 1
+
+[node name="Race Car" parent="." instance=ExtResource("16_0ss7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0949657, -1.11682, -0.399998)
+
+[node name="purple_panel" parent="." instance=ExtResource("17_6dso1")]
+transform = Transform3D(0.103504, 0.381331, -0.918626, -0.984626, 0.169939, -0.0403973, 0.140706, 0.908685, 0.393058, -0.593963, 0.18098, -0.382919)
+
+[node name="dash_panel" parent="." instance=ExtResource("18_l558f")]
+transform = Transform3D(0.0178974, -0.495609, -0.868362, -0.996969, 0.0569193, -0.0530342, 0.0757107, 0.866679, -0.493088, 0.811635, 0.313084, -0.0790042)
 
 [connection signal="pressed" from="buttons/replay" to="." method="_on_replay_pressed"]
 [connection signal="pressed" from="buttons/settings" to="." method="_on_settings_pressed"]

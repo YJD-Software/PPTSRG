@@ -280,6 +280,7 @@ shape = SubResource("BoxShape3D_yv42o")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RootNode/lever"]
 transform = Transform3D(1, 0, 0, 0, 0.99998, -1.78814e-07, 0, 1.78814e-07, 0.99998, 0, -0.457415, 4.47035e-08)
 shape = SubResource("BoxShape3D_6eo5j")
+disabled = true
 
 [node name="marks" type="Node3D" parent="RootNode/lever"]
 transform = Transform3D(1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, -0.989, 0.001)
@@ -308,6 +309,7 @@ shape = SubResource("BoxShape3D_p3l3u")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RootNode/lever/areaL"]
 transform = Transform3D(1, 0, 0, 0, 0.999981, -1.19209e-07, 0, 1.19209e-07, 0.999981, 0, -0.472391, 4.47035e-08)
 shape = SubResource("BoxShape3D_5b452")
+disabled = true
 
 [node name="areaR" type="Area3D" parent="RootNode/lever"]
 collision_layer = 16
@@ -320,6 +322,7 @@ shape = SubResource("BoxShape3D_p3l3u")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RootNode/lever/areaR"]
 transform = Transform3D(1, 0, 0, 0, 0.999981, -1.19209e-07, 0, 1.19209e-07, 0.999981, 0, -0.472391, 4.47035e-08)
 shape = SubResource("BoxShape3D_5b452")
+disabled = true
 
 [node name="lever_base" type="Node3D" parent="RootNode"]
 transform = Transform3D(1.5, 0, 0, 0, -6.55671e-08, 1.5, 0, -1.5, -6.55671e-08, 0, 0, 0)
