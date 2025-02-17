@@ -1,0 +1,500 @@
+[gd_scene load_steps=23 format=3 uid="uid://br24oca6yewg1"]
+
+[ext_resource type="Script" path="res://Game/Menu/Menus/main_title.gd" id="1_1iey1"]
+[ext_resource type="VideoStream" path="res://Game/Menu/Texture/Video/render1.ogv" id="2_f6xkw"]
+[ext_resource type="Shader" path="res://Game/Menu/Shader/vcr_pause.gdshader" id="3_e417y"]
+[ext_resource type="AudioStream" uid="uid://dkpntqt8iqxug" path="res://Game/Menu/SFX/Music/02. Chapter 3 Title Screen.mp3" id="4_0wrdt"]
+[ext_resource type="Theme" uid="uid://dv4qrnr0ds2w6" path="res://Game/Menu/theme/menu.tres" id="6_m5i1f"]
+[ext_resource type="Script" path="res://Game/Menu/Menus/replay_encounter.gd" id="7_vsx4s"]
+[ext_resource type="Shader" path="res://Game/Menu/Shader/blur.gdshader" id="8_j7jel"]
+[ext_resource type="Texture2D" uid="uid://qr7cw85m8s11" path="res://Game/Menu/Texture/ReplayImages/demo_scene.tscn - Grabpack In Godot - Godot Engine 2024-09-08 9_38_53 AM.png" id="9_fd05x"]
+[ext_resource type="Script" path="res://Game/Menu/CustomButtons/replaybutton.gd" id="10_jglre"]
+[ext_resource type="Texture2D" uid="uid://bju8f3r3p6lu4" path="res://Game/Menu/Texture/ReplayImages/demo_scene.tscn - Grabpack In Godot - Godot Engine 2024-09-08 9_54_36 AM.png" id="11_kieh4"]
+[ext_resource type="PackedScene" uid="uid://umft1vb3u8io" path="res://Game/Menu/Menus/settings.tscn" id="12_x6noy"]
+[ext_resource type="Script" path="res://Game/Menu/SFX/btn_sfx.gd" id="13_xot04"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_gu1im"]
+noise_type = 2
+seed = 1
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_s4m1o"]
+width = 2
+height = 2
+normalize = false
+noise = SubResource("FastNoiseLite_gu1im")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wrrx6"]
+shader = ExtResource("3_e417y")
+shader_parameter/curvature = 0.0
+shader_parameter/skip = 0.0
+shader_parameter/image_flicker = 0.04
+shader_parameter/vignette_flicker_speed = 0.0
+shader_parameter/vignette_strength = 0.75
+shader_parameter/small_scanlines_speed = 0.1
+shader_parameter/small_scanlines_proximity = 1.0
+shader_parameter/small_scanlines_opacity = 1.0
+shader_parameter/scanlines_opacity = 1.0
+shader_parameter/scanlines_speed = 0.1
+shader_parameter/scanline_thickness = 0.57
+shader_parameter/scanlines_spacing = 1.0
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_s4m1o")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68e28"]
+expand_margin_top = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q4q4r"]
+shader = ExtResource("8_j7jel")
+shader_parameter/lod = 3.5
+shader_parameter/mix_percentage = 0.34
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ekilp"]
+_surfaces = [{
+"2d": true,
+"aabb": AABB(-652.5, -296, 0, 1305, 592, 0),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63),
+"format": 34393296913,
+"index_count": 6,
+"index_data": PackedByteArray(3, 0, 0, 0, 1, 0, 1, 0, 2, 0, 3, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 32, 35, 196, 0, 0, 148, 67, 0, 32, 35, 196, 0, 0, 148, 195, 0, 32, 35, 68, 0, 0, 148, 195, 0, 32, 35, 68, 0, 0, 148, 67)
+}]
+
+[sub_resource type="Animation" id="Animation_t4lfx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.5]
+}
+
+[sub_resource type="Animation" id="Animation_k0a6l"]
+resource_name = "close"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [3.5, 1.087]
+}
+
+[sub_resource type="Animation" id="Animation_e8npk"]
+resource_name = "open"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.087, 3.5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qq4kf"]
+_data = {
+"RESET": SubResource("Animation_t4lfx"),
+"close": SubResource("Animation_k0a6l"),
+"open": SubResource("Animation_e8npk")
+}
+
+[node name="title_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1iey1")
+
+[node name="menu_bg_video" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_f6xkw")
+autoplay = true
+expand = true
+loop = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_wrrx6")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="menu_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0wrdt")
+volume_db = -15.0
+autoplay = true
+
+[node name="chapter" type="Label" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 59.0
+offset_right = 261.0
+offset_bottom = 83.0
+theme = ExtResource("6_m5i1f")
+theme_override_font_sizes/font_size = 27
+text = "PPT SR and YJD Games Presents"
+vertical_alignment = 1
+uppercase = true
+
+[node name="title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 97.0
+offset_right = 387.0
+offset_bottom = 141.0
+theme = ExtResource("6_m5i1f")
+theme_override_font_sizes/font_size = 49
+text = "POPPY PLAYTIME SPEEDRUNNING GAME"
+vertical_alignment = 1
+uppercase = true
+
+[node name="HSeparator" type="HSeparator" parent="."]
+layout_mode = 0
+offset_top = 165.0
+offset_right = 510.0
+offset_bottom = 169.0
+theme = ExtResource("6_m5i1f")
+theme_override_constants/separation = 4
+theme_override_styles/separator = SubResource("StyleBoxFlat_68e28")
+
+[node name="description" type="Label" parent="."]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 196.0
+offset_right = 1006.0
+offset_bottom = 307.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("6_m5i1f")
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 6
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 36
+text = "Community Made Poppy Playtime Game with Several
+Maps (and chapter's) by Everyone all Around
+the Speedrunning Scene"
+
+[node name="version" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 635.0
+offset_right = 88.0
+offset_bottom = 658.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("6_m5i1f")
+theme_override_colors/font_color = Color(0.593134, 0.593134, 0.593134, 1)
+theme_override_font_sizes/font_size = 19
+text = "2025 PPT SR - YJD GAMES"
+
+[node name="buttons" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.023
+anchor_top = 0.571
+anchor_right = 0.33
+anchor_bottom = 0.931
+offset_left = -0.496002
+offset_top = -0.00802612
+offset_right = -0.160004
+offset_bottom = -0.288025
+
+[node name="replay" type="Button" parent="buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.031
+offset_left = 29.0
+offset_top = 64.0
+offset_right = 309.026
+offset_bottom = 98.0
+theme = ExtResource("6_m5i1f")
+theme_override_font_sizes/font_size = 22
+text = "CHAPTER SELECT"
+alignment = 0
+
+[node name="settings" type="Button" parent="buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.031
+offset_left = 29.0
+offset_top = 102.0
+offset_right = 309.026
+offset_bottom = 136.0
+theme = ExtResource("6_m5i1f")
+theme_override_font_sizes/font_size = 22
+text = "SETTINGS"
+alignment = 0
+
+[node name="credits" type="Button" parent="buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.031
+offset_left = 29.0
+offset_top = 140.0
+offset_right = 309.026
+offset_bottom = 174.0
+theme = ExtResource("6_m5i1f")
+theme_override_font_sizes/font_size = 22
+text = "CREDITS"
+alignment = 0
+
+[node name="quit" type="Button" parent="buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.031
+offset_left = 29.0
+offset_top = 179.0
+offset_right = 309.026
+offset_bottom = 213.0
+theme = ExtResource("6_m5i1f")
+theme_override_font_sizes/font_size = 22
+text = "QUIT"
+alignment = 0
+
+[node name="replay_encounter" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_vsx4s")
+
+[node name="ColorRect" type="ColorRect" parent="replay_encounter"]
+material = SubResource("ShaderMaterial_q4q4r")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.998457
+metadata/_edit_use_anchors_ = true
+
+[node name="replayencounter" type="Label" parent="replay_encounter"]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 30.0
+offset_right = 660.0
+offset_bottom = 111.0
+theme = ExtResource("6_m5i1f")
+theme_override_font_sizes/font_size = 50
+text = "[REPLAY ENCOUNTER]"
+vertical_alignment = 1
+
+[node name="replaytitle" type="Label" parent="replay_encounter"]
+layout_mode = 0
+offset_left = 510.0
+offset_top = 437.0
+offset_right = 1037.0
+offset_bottom = 518.0
+theme = ExtResource("6_m5i1f")
+theme_override_font_sizes/font_size = 30
+text = "Level Name"
+vertical_alignment = 1
+
+[node name="load" type="Button" parent="replay_encounter"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.031
+offset_left = 714.0
+offset_top = 544.0
+offset_right = 994.026
+offset_bottom = 578.0
+theme = ExtResource("6_m5i1f")
+theme_override_font_sizes/font_size = 22
+text = "LOAD CHECKPOINT "
+alignment = 2
+
+[node name="back" type="Button" parent="replay_encounter"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.031
+offset_left = 960.0
+offset_top = 583.0
+offset_right = 993.288
+offset_bottom = 617.0
+theme = ExtResource("6_m5i1f")
+theme_override_colors/font_hover_color = Color(0.566298, 0.566298, 0.566298, 1)
+theme_override_font_sizes/font_size = 22
+text = "BACK"
+flat = true
+
+[node name="replay_image" type="MeshInstance2D" parent="replay_encounter"]
+position = Vector2(769, 288)
+scale = Vector2(0.39636, 0.502534)
+mesh = SubResource("ArrayMesh_ekilp")
+texture = ExtResource("9_fd05x")
+
+[node name="level1" type="Button" parent="replay_encounter"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.031
+offset_left = 110.0
+offset_top = 140.0
+offset_right = 390.026
+offset_bottom = 174.0
+theme = ExtResource("6_m5i1f")
+theme_override_font_sizes/font_size = 22
+text = "CHAPTER 1"
+alignment = 0
+script = ExtResource("10_jglre")
+level_path = "res://Game/Menu/Menus/title_screen.tscn"
+image = ExtResource("9_fd05x")
+
+[node name="level2" type="Button" parent="replay_encounter"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.031
+offset_left = 110.0
+offset_top = 176.0
+offset_right = 390.026
+offset_bottom = 210.0
+theme = ExtResource("6_m5i1f")
+theme_override_font_sizes/font_size = 22
+disabled = true
+text = "CHAPTER 2"
+alignment = 0
+script = ExtResource("10_jglre")
+level_path = "res://Level/test.tscn"
+image = ExtResource("11_kieh4")
+
+[node name="level3" type="Button" parent="replay_encounter"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.031
+offset_left = 110.0
+offset_top = 212.0
+offset_right = 390.026
+offset_bottom = 246.0
+theme = ExtResource("6_m5i1f")
+theme_override_font_sizes/font_size = 22
+disabled = true
+text = "CHAPTER 3"
+alignment = 0
+script = ExtResource("10_jglre")
+level_path = "res://Level/demo_scene.tscn"
+image = ExtResource("9_fd05x")
+
+[node name="level4" type="Button" parent="replay_encounter"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.031
+offset_left = 110.0
+offset_top = 248.0
+offset_right = 390.026
+offset_bottom = 282.0
+theme = ExtResource("6_m5i1f")
+theme_override_font_sizes/font_size = 22
+disabled = true
+text = "CHAPTER 4"
+alignment = 0
+script = ExtResource("10_jglre")
+level_path = "res://Level/test.tscn"
+image = ExtResource("11_kieh4")
+
+[node name="level5" type="Button" parent="replay_encounter"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.031
+offset_left = 110.0
+offset_top = 283.0
+offset_right = 390.026
+offset_bottom = 317.0
+theme = ExtResource("6_m5i1f")
+theme_override_font_sizes/font_size = 22
+disabled = true
+text = "CHAPTER 5"
+alignment = 0
+script = ExtResource("10_jglre")
+level_path = "res://Level/test.tscn"
+image = ExtResource("11_kieh4")
+
+[node name="HSeparator" type="HSeparator" parent="replay_encounter"]
+layout_mode = 0
+offset_left = 510.0
+offset_top = 518.0
+offset_right = 1028.0
+offset_bottom = 522.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="replay_encounter"]
+libraries = {
+"": SubResource("AnimationLibrary_qq4kf")
+}
+
+[node name="Settings" parent="." instance=ExtResource("12_x6noy")]
+visible = false
+layout_mode = 1
+
+[node name="ButtonSFXPlayer" type="Node" parent="."]
+script = ExtResource("13_xot04")
+root_path = NodePath("../buttons")
+
+[node name="ButtonSFXPlayer2" type="Node" parent="."]
+script = ExtResource("13_xot04")
+root_path = NodePath("../replay_encounter")
+
+[connection signal="pressed" from="buttons/replay" to="." method="_on_replay_pressed"]
+[connection signal="pressed" from="buttons/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="buttons/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="replay_encounter/load" to="replay_encounter" method="_on_load_pressed"]
+[connection signal="pressed" from="replay_encounter/back" to="replay_encounter" method="_on_back_pressed"]
+[connection signal="animation_finished" from="replay_encounter/AnimationPlayer" to="replay_encounter" method="_on_animation_player_animation_finished"]
