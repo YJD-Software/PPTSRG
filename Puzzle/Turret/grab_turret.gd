@@ -114,3 +114,7 @@ func _john():
 		_fire_hand()
 	else:
 		_release_hand()
+
+
+func _on_playwatch_camera_obstacle_openned() -> void:
+	_john()

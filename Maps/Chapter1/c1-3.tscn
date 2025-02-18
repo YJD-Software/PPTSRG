@@ -1,11 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://cg162rfhxa4sj"]
+[gd_scene load_steps=10 format=3 uid="uid://cg162rfhxa4sj"]
 
 [ext_resource type="Material" uid="uid://c0exx3n5khu2f" path="res://Textures/wooding/wooding.tres" id="1_1gk4j"]
 [ext_resource type="PackedScene" uid="uid://wipogv674odr" path="res://Player/player.tscn" id="1_x7lw2"]
 [ext_resource type="PackedScene" uid="uid://bjhse55dlsf0a" path="res://Item/Grabpack/playwatch.tscn" id="3_ks41j"]
-[ext_resource type="PackedScene" uid="uid://cog1oiwpj12x7" path="res://Puzzle/Turret/grab_turret.tscn" id="4_q6a8o"]
 [ext_resource type="PackedScene" uid="uid://cnp4xletrofhp" path="res://Puzzle/Playwatch Camera/playwatch_camera.tscn" id="5_05b76"]
 [ext_resource type="Script" path="res://Puzzle/Playwatch Camera/playwatch_cameras.gd" id="6_3ldce"]
+[ext_resource type="PackedScene" uid="uid://bj8oeqdjcnfts" path="res://Puzzle/Dash Panel/dash_panel.tscn" id="6_pvcuo"]
+[ext_resource type="PackedScene" uid="uid://b6jhnelyu0cjv" path="res://Puzzle/Gates/large_gate.tscn" id="6_u420b"]
+[ext_resource type="PackedScene" uid="uid://cci31kuqdnklx" path="res://Puzzle/Gates/gate.tscn" id="8_8thvl"]
+[ext_resource type="PackedScene" uid="uid://bghr8effdjgcs" path="res://Puzzle/Race Car/racecar.tscn" id="9_guaxo"]
 
 [node name="C1-3" type="Node3D"]
 
@@ -15,8 +18,21 @@ use_collision = true
 material = ExtResource("1_1gk4j")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(1.85494, 0, 0, 0, 1.38393, 0, 0, 0, 2.8512, -4.41182, 208.31, 53.8697)
+transform = Transform3D(1.85494, 0, 0, 0, 1.38393, 0, 0, 0, 2.8512, -4.41182, 207.96, 54.0273)
 use_collision = true
+size = Vector3(1, 1.50537, 1.43475)
+material = ExtResource("1_1gk4j")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(10.2928, 0, 0, 0, 1.38393, 0, 0, 0, 2.8512, -4.41182, 246.505, 53.4319)
+use_collision = true
+size = Vector3(1, 1.50537, 2.99863)
+material = ExtResource("1_1gk4j")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(11.1806, 0, 0, 0, 22.0228, 0, 0, 0, 2.8512, -4.42303, 248.719, 60.7644)
+use_collision = true
+size = Vector3(0.91272, 4.1333, 0.363251)
 material = ExtResource("1_1gk4j")
 
 [node name="Player" parent="." instance=ExtResource("1_x7lw2")]
@@ -39,15 +55,36 @@ spot_range = 4096.0
 spot_attenuation = -0.4
 
 [node name="playwatch" parent="." instance=ExtResource("3_ks41j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.39984, 209.002, 54.7774)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.39984, 209.002, 55.3777)
 play_collect_jingle = true
 
-[node name="Grab Turret" parent="." instance=ExtResource("4_q6a8o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.12581, 207.139, 49.9413)
+[node name="PlaywatchCams" type="Node" parent="."]
+script = ExtResource("6_3ldce")
 
-[node name="cam_1" parent="." instance=ExtResource("5_05b76")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.46396, 208.83, 48.0131)
+[node name="playwatch_camera" parent="PlaywatchCams" instance=ExtResource("5_05b76")]
+transform = Transform3D(1, 0, 0, 0, 0.745697, 0.666285, 0, -0.666285, 0.745697, -4.42916, 288.973, 59.183)
+fov = 88.3
 play_puzzle_complete_sound = true
 
-[node name="PlaywatchCams" type="Node" parent="cam_1"]
-script = ExtResource("6_3ldce")
+[node name="playwatch_camera2" parent="PlaywatchCams" instance=ExtResource("5_05b76")]
+transform = Transform3D(1, 0, 0, 0, 0.745697, 0.666285, 0, -0.666285, 0.745697, -4.42916, 262.384, 45.6509)
+fov = 88.3
+play_puzzle_complete_sound = true
+
+[node name="Large Gate" parent="." instance=ExtResource("6_u420b")]
+transform = Transform3D(-0.966582, 3.58657, 9.16281e-07, 0, -1.56854e-07, 20.9728, 30.2361, 0.114655, 2.92915e-08, -3.95956, 207.139, 48.531)
+
+[node name="dash_panel" parent="." instance=ExtResource("6_pvcuo")]
+transform = Transform3D(1, 0, 0, 0, -0.999374, 0.0353705, 0, -0.0353705, -0.999374, -4.54558, 250.307, 58.1466)
+
+[node name="dash_panel2" parent="." instance=ExtResource("6_pvcuo")]
+transform = Transform3D(1, 0, 0, 0, -0.999374, 0.0353705, 0, -0.0353705, -0.999374, -4.54558, 281.967, 55.6451)
+
+[node name="Gate" parent="." instance=ExtResource("8_8thvl")]
+transform = Transform3D(2.3441, 0, 0, 0, 24.8217, 0.00776972, 0, -0.324065, 0.59512, -3.51296, 206.654, 34.7269)
+
+[node name="Race Car" parent="." instance=ExtResource("9_guaxo")]
+transform = Transform3D(-1.2044, 0, 5.1469e-07, 0, 1.99729, 0, -1.05292e-07, 0, -5.88737, -4.1229, 207.908, 19.0389)
+
+[connection signal="obstacle_openned" from="PlaywatchCams/playwatch_camera" to="Large Gate" method="_on_playwatch_camera_obstacle_openned"]
+[connection signal="obstacle_openned" from="PlaywatchCams/playwatch_camera2" to="Gate" method="_on_playwatch_camera_2_obstacle_openned"]

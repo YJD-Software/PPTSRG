@@ -94,3 +94,7 @@ func _on_animation_player_animation_finished(anim_name):
 		emit_signal("opened")
 	if anim_name == "close":
 		emit_signal("closed")
+
+
+func _on_playwatch_camera_2_obstacle_openned() -> void:
+	_open()

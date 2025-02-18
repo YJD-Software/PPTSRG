@@ -51,3 +51,7 @@ func _on_line_detection_area_exited(area):
 	current_area -= 1
 	if current_area < 1 and powered == true:
 		_dis_charge()
+
+
+func _on_playwatch_camera_obstacle_openned() -> void:
+	can_power = true

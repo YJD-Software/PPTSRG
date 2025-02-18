@@ -49,3 +49,7 @@ func _on_flare_scanner_scanned_flare() -> void:
 
 func _on_collectable_hand_3_collected() -> void:
 	_open()
+
+
+func _on_playwatch_camera_obstacle_openned() -> void:
+	_open()
