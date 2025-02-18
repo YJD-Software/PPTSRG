@@ -37,7 +37,7 @@ func _close_pause() -> void:
 func _on_titlescreen_pressed():
 	get_tree().paused = false
 	get_tree().call_group("player", "_disable_movement", true)
-	LoadManagement.load_scene("res://Game/Menu/Menus/title_screen.tscn")
+	LoadManagement.load_scene("res://Game/Menu/Menus/main_title.tscn")
 
 func _on_quit_pressed():
 	get_tree().paused = false

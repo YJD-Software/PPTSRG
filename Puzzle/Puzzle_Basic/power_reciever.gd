@@ -9,6 +9,7 @@ extends StaticBody3D
 @export var required_power_poles = 1
 ##If enabled, it plays the puzzle complete sound when powered
 @export var play_complete_sound = false
+@export var turretconnect = true
 
 signal  power_recieved
 
@@ -23,16 +24,19 @@ func _power():
 		get_tree().call_group("player", "_retract_hands")
 		if play_complete_sound == true:
 			puzzle_complete.play()
+			print("john")
 
 func _on_hand_col_area_entered(area):
 	if not powered:
 		_power()
 
 func _on_turret_col_area_entered(area):
-	if not powered:
-		emit_signal("power_recieved")
-		light.visible = true
-		recieved.play()
-		powered = true
-		if play_complete_sound == true:
-			puzzle_complete.play()
+	if turretconnect == true:
+		if not powered:
+			emit_signal("power_recieved")
+			light.visible = true
+			recieved.play()
+			powered = true
+			if play_complete_sound == true:
+				puzzle_complete.play()
+				print("turret")

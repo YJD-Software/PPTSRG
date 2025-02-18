@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcpptuajqfvyo"]
+
+[ext_resource type="VideoStream" path="res://Game/Menu/videos/PPTSRINTRO.ogv" id="1_sbadp"]
+[ext_resource type="VideoStream" path="res://Game/Menu/videos/yjdlogonew.ogv" id="2_kxfry"]
+[ext_resource type="Script" path="res://Game/Menu/Menus/video_stream_player_2.gd" id="3_l81yi"]
+
+[node name="Bootup1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1088.0
+scale = Vector2(0.6, 0.6)
+stream = ExtResource("1_sbadp")
+autoplay = true
+
+[node name="VideoStreamPlayer2" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1088.0
+scale = Vector2(0.6, 0.6)
+stream = ExtResource("2_kxfry")
+script = ExtResource("3_l81yi")
+
+[connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer2" method="_on_video_stream_player_finished"]

@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://cg162rfhxa4sj"]
+
+[ext_resource type="Material" uid="uid://c0exx3n5khu2f" path="res://Textures/wooding/wooding.tres" id="1_1gk4j"]
+[ext_resource type="PackedScene" uid="uid://wipogv674odr" path="res://Player/player.tscn" id="1_x7lw2"]
+[ext_resource type="PackedScene" uid="uid://bjhse55dlsf0a" path="res://Item/Grabpack/playwatch.tscn" id="3_ks41j"]
+[ext_resource type="PackedScene" uid="uid://cog1oiwpj12x7" path="res://Puzzle/Turret/grab_turret.tscn" id="4_q6a8o"]
+[ext_resource type="PackedScene" uid="uid://cnp4xletrofhp" path="res://Puzzle/Playwatch Camera/playwatch_camera.tscn" id="5_05b76"]
+[ext_resource type="Script" path="res://Puzzle/Playwatch Camera/playwatch_cameras.gd" id="6_3ldce"]
+
+[node name="C1-3" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(126.111, 0, 0, 0, 213.875, 0, 0, 0, 126.768, 0, 100.202, 0)
+use_collision = true
+material = ExtResource("1_1gk4j")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1.85494, 0, 0, 0, 1.38393, 0, 0, 0, 2.8512, -4.41182, 208.31, 53.8697)
+use_collision = true
+material = ExtResource("1_1gk4j")
+
+[node name="Player" parent="." instance=ExtResource("1_x7lw2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.29126, 207.174, 58.7446)
+grabpack_version = 1
+has_flashlight = true
+defualt_hand = 1
+red_hand = true
+flare_hand = true
+dash_hand = true
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.213354, 0.976975, 0, -0.976975, 0.213354, -3.36588, 347.738, 112.731)
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 16.13
+light_size = 1.24
+light_specular = 0.308
+distance_fade_begin = 3130.4
+spot_range = 4096.0
+spot_attenuation = -0.4
+
+[node name="playwatch" parent="." instance=ExtResource("3_ks41j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.39984, 209.002, 54.7774)
+play_collect_jingle = true
+
+[node name="Grab Turret" parent="." instance=ExtResource("4_q6a8o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.12581, 207.139, 49.9413)
+
+[node name="cam_1" parent="." instance=ExtResource("5_05b76")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.46396, 208.83, 48.0131)
+play_puzzle_complete_sound = true
+
+[node name="PlaywatchCams" type="Node" parent="cam_1"]
+script = ExtResource("6_3ldce")

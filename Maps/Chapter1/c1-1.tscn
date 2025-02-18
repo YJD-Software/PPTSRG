@@ -1,6 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://mkehdhtmi437"]
+[gd_scene load_steps=24 format=3 uid="uid://mkehdhtmi437"]
 
+[ext_resource type="Script" path="res://Maps/Chapter1/training.gd" id="1_e32dl"]
 [ext_resource type="PackedScene" uid="uid://wipogv674odr" path="res://Player/player.tscn" id="1_pohm7"]
+[ext_resource type="Material" uid="uid://c0exx3n5khu2f" path="res://Textures/wooding/wooding.tres" id="2_h8a7x"]
 [ext_resource type="PackedScene" uid="uid://cu72dk6n7aaco" path="res://Item/Grabpack/grabpack_item.tscn" id="2_oqqos"]
 [ext_resource type="PackedScene" uid="uid://c7h4vgpq7wn2j" path="res://Puzzle/Handle/grapple_handle.tscn" id="3_bcq21"]
 [ext_resource type="PackedScene" uid="uid://0jm4505rp5fs" path="res://Puzzle/Puzzle_Basic/power_source.tscn" id="4_aq2tj"]
@@ -16,47 +18,84 @@
 [ext_resource type="VideoStream" path="res://Item/Vhs/Video/VHS_3_1k.ogv" id="14_v188v"]
 [ext_resource type="PackedScene" uid="uid://ds0xuh6jlgnl1" path="res://Item/Vhs/vhs_player.tscn" id="15_obtwt"]
 [ext_resource type="PackedScene" uid="uid://0ityjxe6w7c0" path="res://Item/Vhs/vhs_tape.tscn" id="16_4tc32"]
+[ext_resource type="AudioStream" uid="uid://bv3q271kk8n7t" path="res://Item/Vhs/Video/Male 1 gesserit.co tts.mp3" id="16_pdgtu"]
+[ext_resource type="AudioStream" uid="uid://efe7clhkdc8x" path="res://Item/Vhs/Video/countik-audio.mp3" id="19_ishdu"]
+[ext_resource type="Script" path="res://Game/Scripts/eventrigger.gd" id="20_jbbws"]
+[ext_resource type="AudioStream" uid="uid://dlx3k4puab508" path="res://Item/Vhs/Video/countik-audio (1).mp3" id="20_t0bss"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0iwel"]
 
 [node name="C1-1" type="Node3D"]
+script = ExtResource("1_e32dl")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(14.5727, 0, 0, 0, 1, 0, 0, 0, 45.6601, 0, 0, -15.4118)
 use_collision = true
+material = ExtResource("2_h8a7x")
 
 [node name="CSGBox3D17" type="CSGBox3D" parent="."]
 transform = Transform3D(5.81981, 0, 0, 0, 15.396, 0, 0, 0, 161.936, 5.06807, 5.83371, -15.4118)
 use_collision = true
+material = ExtResource("2_h8a7x")
 
 [node name="CSGBox3D19" type="CSGBox3D" parent="."]
 transform = Transform3D(-0.295354, 0, 161.728, 0, 15.396, 0, -5.81231, 0, -8.21824, -1.07748, 5.83371, 9.06428)
 use_collision = true
+material = ExtResource("2_h8a7x")
 
 [node name="CSGBox3D18" type="CSGBox3D" parent="."]
 transform = Transform3D(5.81981, 0, 0, 0, 15.396, 0, 0, 0, 161.936, -4.83497, 5.83371, -15.4118)
 use_collision = true
+material = ExtResource("2_h8a7x")
 
 [node name="CSGBox3D14" type="CSGBox3D" parent="."]
 transform = Transform3D(14.5727, 0, 0, 0, 6.61159, 0, 0, 0, 5.5262, 0, 3.4968, -35.6585)
 use_collision = true
+material = ExtResource("2_h8a7x")
 
 [node name="CSGBox3D16" type="CSGBox3D" parent="."]
 transform = Transform3D(14.5727, 0, 0, 0, 6.61159, 0, 0, 0, 5.5262, 0, 11.1025, -41.6306)
 use_collision = true
+material = ExtResource("2_h8a7x")
 
 [node name="Player" parent="." instance=ExtResource("1_pohm7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.043047, 0, -0.0221496)
 start_with_grabpack = false
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.22405, 0.974578, 0, -0.974578, 0.22405, 0.043047, 7.05667, -1.2509)
+transform = Transform3D(1, 0, 0, 0, 0.22405, 0.974578, 0, -0.974578, 0.22405, 0.043047, 6.25038, 1.84656)
+light_energy = 13.121
+light_size = 0.596
+spot_range = 9.792
+spot_attenuation = 1.2
+spot_angle = 68.62
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.549839, -0.835271, 0, 0.835271, 0.549839, 0.043047, 7.05667, -1.2509)
+light_energy = 13.121
+light_size = 0.596
+spot_range = 9.792
+spot_attenuation = 1.2
+spot_angle = 68.62
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.22405, 0.974578, 0, -0.974578, 0.22405, 0.043047, 7.34612, -17.7557)
 light_energy = 13.121
 light_size = 0.596
 spot_range = 9.792
 spot_attenuation = 1.2
 spot_angle = 44.96
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.22405, 0.974578, 0, -0.974578, 0.22405, 0.043047, 7.34612, -17.7557)
+[node name="SpotLight3D6" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.900106, 0.435671, 0, -0.435671, -0.900106, 0.043047, 7.34612, -17.7557)
+light_energy = 13.121
+light_size = 0.596
+spot_range = 9.792
+spot_attenuation = 1.2
+spot_angle = 44.96
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.98606, 0.16639, 0, -0.16639, 0.98606, 0.043047, 7.34612, -17.7557)
 light_energy = 13.121
 light_size = 0.596
 spot_range = 9.792
@@ -71,57 +110,102 @@ spot_range = 9.792
 spot_attenuation = 1.2
 spot_angle = 44.96
 
+[node name="SpotLight3D5" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.969957, -0.243277, 0, 0.243277, 0.969957, 0.043047, 6.63913, -28.1752)
+light_energy = 13.121
+light_size = 0.596
+spot_range = 9.792
+spot_attenuation = 1.2
+spot_angle = 44.96
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.938505, 0.345266, 0, -0.345266, -0.938505, 0.043047, 6.63913, -28.1752)
+light_energy = 13.121
+light_size = 0.596
+spot_range = 9.792
+spot_attenuation = 1.2
+spot_angle = 44.96
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.973976, 0.226652, 0, -0.226652, -0.973976, 0.043047, 9.74225, -35.9789)
+light_energy = 13.121
+light_size = 0.596
+spot_range = 9.792
+spot_attenuation = 1.2
+spot_angle = 44.96
+
+[node name="SpotLight3D10" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.956228, 0.292622, 0, -0.292622, 0.956228, 0.043047, 9.74225, -35.9789)
+light_energy = 13.121
+light_size = 0.596
+spot_range = 9.792
+spot_attenuation = 1.2
+spot_angle = 44.96
+
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
 transform = Transform3D(1.93505, 0, 0, 0, 1.42536, 0, 0, 0, 2.36219, 2.38419e-07, 0.932812, -6.5745)
 use_collision = true
+material = ExtResource("2_h8a7x")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="."]
 transform = Transform3D(1.93505, 0, 0, 0, 0.591507, 0, 0, 0, 2.36219, 2.38419e-07, 2.55532, -6.5745)
 use_collision = true
+material = ExtResource("2_h8a7x")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="."]
 transform = Transform3D(1.93505, 0, 0, 0, 0.591507, 0, 0, 0, 7.03593, 2.38419e-07, 8.16509, -7.99028)
 use_collision = true
+material = ExtResource("2_h8a7x")
 
 [node name="CSGBox3D15" type="CSGBox3D" parent="."]
 transform = Transform3D(1.93505, 0, 0, 0, 0.591507, 0, 0, 0, 7.03593, 2.38419e-07, 11.7842, -37.8838)
 use_collision = true
+material = ExtResource("2_h8a7x")
 
 [node name="CSGBox3D9" type="CSGBox3D" parent="."]
 transform = Transform3D(1.93505, 0, 0, 0, 0.513366, -3.49508, 0, 0.293829, 6.10645, -0.0573666, 4.33894, -10.9278)
 use_collision = true
+material = ExtResource("2_h8a7x")
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="."]
 transform = Transform3D(1.93505, 0, 0, 0, 6.06511, 0, 0, 0, 1.536, 2.38419e-07, 3.22225, -14.4298)
 use_collision = true
+material = ExtResource("2_h8a7x")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="."]
 transform = Transform3D(0.469164, 0, 0, 0, 0.591507, 0, 0, 0, 2.36219, 0.724649, 1.96342, -6.5745)
 use_collision = true
+material = ExtResource("2_h8a7x")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="."]
 transform = Transform3D(0.469164, 0, 0, 0, 0.591507, 0, 0, 0, 2.36219, -0.719051, 1.96342, -6.5745)
 use_collision = true
+material = ExtResource("2_h8a7x")
 
 [node name="CSGBox3D10" type="CSGBox3D" parent="."]
 transform = Transform3D(1.93505, 0, 0, 0, 1.42536, 0, 0, 0, 2.36219, 2.38419e-07, 0.932812, -31.1098)
 use_collision = true
+material = ExtResource("2_h8a7x")
 
 [node name="CSGBox3D11" type="CSGBox3D" parent="."]
 transform = Transform3D(1.93505, 0, 0, 0, 0.591507, 0, 0, 0, 2.36219, 2.38419e-07, 2.55532, -31.1098)
 use_collision = true
+material = ExtResource("2_h8a7x")
 
 [node name="CSGBox3D12" type="CSGBox3D" parent="."]
 transform = Transform3D(0.469164, 0, 0, 0, 0.591507, 0, 0, 0, 2.36219, 0.724649, 1.96342, -31.1098)
 use_collision = true
+material = ExtResource("2_h8a7x")
 
 [node name="CSGBox3D13" type="CSGBox3D" parent="."]
 transform = Transform3D(0.469164, 0, 0, 0, 0.591507, 0, 0, 0, 2.36219, -0.719051, 1.96342, -31.1098)
 use_collision = true
+material = ExtResource("2_h8a7x")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="."]
 transform = Transform3D(1.93505, 0, 0, 0, 0.606487, 0, 0, 0, 1.09349, 2.38419e-07, 1.95333, -7.19637)
 use_collision = true
+material = ExtResource("2_h8a7x")
 
 [node name="Grabpack Item" parent="." instance=ExtResource("2_oqqos")]
 transform = Transform3D(0.996645, 0, 0.0818515, 0, 1, 0, -0.0818515, 0, 0.996645, 0.151428, 1.9387, -6.44652)
@@ -135,10 +219,12 @@ transform = Transform3D(1, 0, 0, 0, 0.999964, -0.00846466, 0, 0.00846466, 0.9999
 
 [node name="power_source" parent="." instance=ExtResource("4_aq2tj")]
 transform = Transform3D(-0.999794, 0, 0.0203142, 0, 1, 0, -0.0203142, 0, -0.999794, 0.021108, 2.22076, -15.1609)
+can_power = false
 
 [node name="power_reciever" parent="." instance=ExtResource("5_qa6yd")]
 transform = Transform3D(-0.999953, 0, 0.00968634, 0, 1, 0, -0.00968634, 0, -0.999953, 0.039485, 4.22037, -15.1978)
 play_complete_sound = true
+turretconnect = false
 
 [node name="Large Gate" parent="." instance=ExtResource("6_g8405")]
 transform = Transform3D(-0.00411895, 0.999992, 4.3711e-08, 0, -4.37114e-08, 1, 0.999992, 0.00411895, 1.80045e-10, 0.0523025, 0.5, -22.4855)
@@ -154,6 +240,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0185103, 1.70814, -30.2324
 
 [node name="green_source" parent="." instance=ExtResource("9_jxhwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0387703, 1.09108, -29.9287)
+has_power = false
 power_keep_time = 10
 
 [node name="green_reciever" parent="." instance=ExtResource("10_vw7tu")]
@@ -164,12 +251,14 @@ play_complete_sound = true
 transform = Transform3D(-0.999996, 8.98696e-06, 0.00284479, 0.0028448, 0.00315907, 0.999991, 0, 0.999995, -0.00315909, 0.0594194, 8.68791, -38.8793)
 
 [node name="Grab Turret" parent="." instance=ExtResource("12_6lgdm")]
-transform = Transform3D(-0.998087, -0.0618191, -0.00128629, 0, 0.0208028, -0.999784, 0.0618325, -0.997871, -0.020763, -0.321347, 5.16266, -38.3928)
+transform = Transform3D(-0.999308, -0.0195061, -0.0316759, -0.0205067, 0.999291, 0.0315779, 0.0310375, 0.0322053, -0.998999, -0.321347, 8.57882, -40.356)
 target_level = "res://Maps/Chapter1/c1-2.tscn"
 
 [node name="VHS TV" parent="." instance=ExtResource("13_rmch0")]
-transform = Transform3D(1, 0, 0, 0, 0.99598, -0.0895723, 0, 0.0895723, 0.99598, -0.00902381, 2.10014, -5.6612)
+transform = Transform3D(1, 0, 0, 0, 0.99598, -0.0895723, 0, 0.0895723, 0.99598, -0.00902369, 0.527363, -5.94863)
 video = ExtResource("14_v188v")
+use_spatial_audio = true
+audio = ExtResource("16_pdgtu")
 
 [node name="VHS Player" parent="." node_paths=PackedStringArray("vhs_tape", "tv") instance=ExtResource("15_obtwt")]
 transform = Transform3D(1, 0, 0, 0, 0.999483, 0.0321609, 0, -0.0321609, 0.999483, -0.00451159, 0.996148, -5.5137)
@@ -180,6 +269,33 @@ tv = NodePath("../VHS TV")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.284454, 1.64549, -5.5177)
 vhs_name = "GrabPack"
 
+[node name="VHS TV2" parent="." instance=ExtResource("13_rmch0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.035458, -0.447597, -20.6977)
+use_spatial_audio = true
+audio = ExtResource("19_ishdu")
+
+[node name="VHS TV3" parent="." instance=ExtResource("13_rmch0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.035458, -0.447597, -28.4729)
+use_spatial_audio = true
+audio = ExtResource("20_t0bss")
+
+[node name="EventTrigger" type="Area3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.35667, 3.00741, -17.929)
+script = ExtResource("20_jbbws")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EventTrigger"]
+shape = SubResource("BoxShape3D_0iwel")
+
+[node name="EventTrigger2" type="Area3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.35667, 3.00741, -25.5969)
+script = ExtResource("20_jbbws")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EventTrigger2"]
+shape = SubResource("BoxShape3D_0iwel")
+
 [connection signal="power_recieved" from="power_reciever" to="Large Gate" method="_on_power_reciever_power_recieved"]
 [connection signal="power_recieved" from="green_reciever" to="Large Gate2" method="_on_green_reciever_power_recieved"]
 [connection signal="pulled" from="Lever" to="Grab Turret" method="_on_lever_pulled"]
+[connection signal="triggered" from="EventTrigger" to="power_source" method="_on_event_trigger_triggered"]
+[connection signal="triggered" from="EventTrigger" to="VHS TV2" method="_on_event_trigger_triggered"]
+[connection signal="triggered" from="EventTrigger2" to="VHS TV3" method="_on_event_trigger_2_triggered"]

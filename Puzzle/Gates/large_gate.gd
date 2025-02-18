@@ -37,3 +37,15 @@ func _on_power_reciever_power_recieved() -> void:
 
 func _on_green_reciever_power_recieved() -> void:
 	_open()
+
+
+func _on_grabpack_item_collected() -> void:
+	_open()
+
+
+func _on_flare_scanner_scanned_flare() -> void:
+	_open()
+
+
+func _on_collectable_hand_3_collected() -> void:
+	_open()

@@ -241,9 +241,10 @@ theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/line_spacing = 6
 theme_override_constants/outline_size = 1
 theme_override_font_sizes/font_size = 36
-text = "International Playtime CO Revival Project has Hired
-All of You on Board. We Recommend Becoming Familliar
-With All Movement Tech Before Entering. Need be Aware"
+text = "International Playtime Co Revival Project (IPRP) has
+Hired All of You on Board. We Recommend Becoming
+Familliar With All Movement Tech Before Entering.
+Need be Aware"
 
 [node name="version" type="Label" parent="."]
 layout_mode = 0

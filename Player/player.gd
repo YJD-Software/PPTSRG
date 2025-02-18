@@ -160,7 +160,7 @@ enum start_hand {
 #Grabpack BTS:
 
 @onready var pack_cast = $neck/head/eyes/Camera/pack_cast
-var grab_speed = 35
+var grab_speed = 350
 var left_use = false
 var grab_point = Vector3()
 var l_hand_current = Vector3()
@@ -361,15 +361,15 @@ func _input(event):
 				_switch_hand_up()
 			if Input.is_action_just_pressed("hand_switch_down"):
 				_switch_hand_down()
-			if Input.is_action_just_pressed("0") and red_hand:
+			if Input.is_action_just_pressed("1") and red_hand:
 				_switch_hand(1)
-			if Input.is_action_just_pressed("1") and green_hand:
+			if Input.is_action_just_pressed("2") and green_hand:
 				_switch_hand(2)
-			if Input.is_action_just_pressed("2") and rocket_hand:
+			if Input.is_action_just_pressed("3") and rocket_hand:
 				_switch_hand(3)
-			if Input.is_action_just_pressed("3") and flare_hand:
+			if Input.is_action_just_pressed("4") and flare_hand:
 				_switch_hand(4)
-			if Input.is_action_just_pressed("4") and dash_hand:
+			if Input.is_action_just_pressed("5") and dash_hand:
 				_switch_hand(5)
 	if Input.is_action_just_pressed("mask") and Player.has_mask and can_move:
 		if mask_equipped:
@@ -1135,21 +1135,21 @@ func _fix_line_r():
 
 func _remove_lines():
 	if l_hand_locked and not left_use:
-		line_l.position.y = 10000
+		line_l.position.y = 1000000
 	if r_hand_locked and not right_use:
-		line_r.position.y = 10000
+		line_r.position.y = 1000000
 	if l_current_lines < 1:
-		line_l_sub_1.position.y = 10000
+		line_l_sub_1.position.y = 1000000
 	if l_current_lines < 2:
-		line_l_sub_2.position.y = 10000
+		line_l_sub_2.position.y = 1000000
 	if l_current_lines < 3:
-		line_l_sub_3.position.y = 10000
+		line_l_sub_3.position.y = 1000000
 	if r_current_lines < 1:
-		line_r_sub_1.position.y = 10000
+		line_r_sub_1.position.y = 1000000
 	if r_current_lines < 2:
-		line_r_sub_2.position.y = 10000
+		line_r_sub_2.position.y = 1000000
 	if r_current_lines < 3:
-		line_r_sub_3.position.y = 10000
+		line_r_sub_3.position.y = 1000000
 
 func _power_line():
 	var line_material = line_mesh.mesh.material
@@ -1283,12 +1283,70 @@ func _collect_hand(hand):
 func _switch_hand_up():
 	var switch_hand = Player.current_hand
 	switch_hand += 1
-	_switch_hand(switch_hand)
+	match switch_hand:
+		1:
+			if red_hand == true:
+				_switch_hand(switch_hand)
+			else:
+				switch_hand += 4
+		2:
+			if green_hand == true:
+				_switch_hand(switch_hand)
+			else:
+				switch_hand -= 1
+		3:
+			if rocket_hand == true:
+				_switch_hand(switch_hand)
+			else:
+				switch_hand -= 1
+		4:
+			if flare_hand == true:
+				_switch_hand(switch_hand)
+			else:
+				switch_hand -= 1
+		5:
+			if dash_hand == true:
+				_switch_hand(switch_hand)
+			else:
+				switch_hand -= 1
+	if switch_hand > 5:
+		switch_hand -= 1
+	else:
+		_switch_hand(switch_hand)
 
 func _switch_hand_down():
 	var switch_hand = Player.current_hand
 	switch_hand -= 1
-	_switch_hand(switch_hand)
+	match switch_hand:
+		1:
+			if red_hand == true:
+				_switch_hand(switch_hand)
+			else:
+				switch_hand += 1
+		2:
+			if green_hand == true:
+				_switch_hand(switch_hand)
+			else:
+				switch_hand += 1
+		3:
+			if rocket_hand == true:
+				_switch_hand(switch_hand)
+			else:
+				switch_hand += 1
+		4:
+			if flare_hand == true:
+				_switch_hand(switch_hand)
+			else:
+				switch_hand += 1
+		5:
+			if dash_hand == true:
+				_switch_hand(switch_hand)
+			else:
+				switch_hand -= 4
+	if switch_hand < 1:
+		switch_hand += 1
+	else:
+		_switch_hand(switch_hand)	
 
 func _switch_hand(hand):
 	if not hand_switch_anim:

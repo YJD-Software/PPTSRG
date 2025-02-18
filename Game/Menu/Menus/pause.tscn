@@ -145,7 +145,7 @@ anchor_bottom = 0.570755
 offset_bottom = 2.0
 theme = ExtResource("2_17ls7")
 theme_override_font_sizes/font_size = 23
-text = "LOADGAME"
+text = "RELOAD"
 alignment = 0
 metadata/_edit_use_anchors_ = true
 

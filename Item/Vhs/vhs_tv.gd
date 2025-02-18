@@ -30,3 +30,11 @@ func _play():
 
 func _on_video_finished():
 	emit_signal("tape_finished")
+
+
+func _on_event_trigger_triggered() -> void:
+	_play()
+
+
+func _on_event_trigger_2_triggered() -> void:
+	_play()
