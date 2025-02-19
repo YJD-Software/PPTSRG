@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cg162rfhxa4sj"]
+[gd_scene load_steps=16 format=3 uid="uid://cg162rfhxa4sj"]
 
 [ext_resource type="Material" uid="uid://c0exx3n5khu2f" path="res://Textures/wooding/wooding.tres" id="1_1gk4j"]
 [ext_resource type="PackedScene" uid="uid://wipogv674odr" path="res://Player/player.tscn" id="1_x7lw2"]
@@ -9,6 +9,12 @@
 [ext_resource type="PackedScene" uid="uid://b6jhnelyu0cjv" path="res://Puzzle/Gates/large_gate.tscn" id="6_u420b"]
 [ext_resource type="PackedScene" uid="uid://cci31kuqdnklx" path="res://Puzzle/Gates/gate.tscn" id="8_8thvl"]
 [ext_resource type="PackedScene" uid="uid://bghr8effdjgcs" path="res://Puzzle/Race Car/racecar.tscn" id="9_guaxo"]
+[ext_resource type="PackedScene" uid="uid://jx5fbov6xhtq" path="res://Puzzle/Battery/battery_socket.tscn" id="10_qkch6"]
+[ext_resource type="PackedScene" uid="uid://rryth3f4cou" path="res://Puzzle/Battery/battery.tscn" id="11_hcnrv"]
+[ext_resource type="PackedScene" uid="uid://bechbsgfmthff" path="res://Puzzle/Green Power/green_source.tscn" id="12_qi35j"]
+[ext_resource type="PackedScene" uid="uid://byxcjqdl02iud" path="res://Puzzle/Green Power/green_reciever.tscn" id="13_fo81v"]
+[ext_resource type="PackedScene" uid="uid://diey8rur80t30" path="res://Puzzle/Turret/starttransition.tscn" id="14_8f83v"]
+[ext_resource type="PackedScene" uid="uid://cn5f8b3834rc" path="res://Puzzle/Levers/lever.tscn" id="15_o2ek4"]
 
 [node name="C1-3" type="Node3D"]
 
@@ -29,6 +35,78 @@ use_collision = true
 size = Vector3(1, 1.50537, 2.99863)
 material = ExtResource("1_1gk4j")
 
+[node name="CSGBox3D9" type="CSGBox3D" parent="."]
+transform = Transform3D(10.2928, 0, 0, 0, 1.38393, 0, 0, 0, 2.8512, 4.74782, 209.373, -32.7864)
+use_collision = true
+size = Vector3(1.5397, 3.56213, 0.598436)
+material = ExtResource("1_1gk4j")
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="."]
+transform = Transform3D(10.2928, 0, 0, 0, 1.38393, 0, 0, 0, 2.8512, 4.74782, 209.373, -10.8971)
+use_collision = true
+size = Vector3(1.5397, 3.56213, 0.598436)
+material = ExtResource("1_1gk4j")
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="."]
+transform = Transform3D(10.2928, 0, 0, 0, 1.38393, 0, 0, 0, 2.8512, -12.3032, 209.373, -26.3103)
+use_collision = true
+size = Vector3(0.693581, 3.56213, 0.598436)
+material = ExtResource("1_1gk4j")
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="."]
+transform = Transform3D(10.2928, 0, 0, 0, 1.38393, 0, 0, 0, 2.8512, -16.6773, 209.373, -18.9363)
+use_collision = true
+size = Vector3(0.178861, 3.56213, 5.58772)
+material = ExtResource("1_1gk4j")
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="."]
+transform = Transform3D(10.2928, 0, 0, 0, 1.38393, 0, 0, 0, 2.8512, -12.3032, 209.373, -12.0455)
+use_collision = true
+size = Vector3(0.693581, 3.56213, 0.598436)
+material = ExtResource("1_1gk4j")
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="."]
+transform = Transform3D(10.2928, 0, 0, 0, 1.38393, 0, 0, 0, 2.8512, 8.85993, 209.373, -19.501)
+use_collision = true
+size = Vector3(0.740677, 3.56213, 5.4335)
+material = ExtResource("1_1gk4j")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.34108, 0, 2.84963, 0, 1.38393, 0, -10.2871, 0, -0.0944823, -2.83706, 209.373, -30.1309)
+use_collision = true
+size = Vector3(0.568481, 3.56213, 0.598436)
+material = ExtResource("1_1gk4j")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="."]
+transform = Transform3D(10.2928, 0, 0, 0, 1.8809, 0, 0, 0, 18.6966, -4.41182, 210.995, 0.599196)
+use_collision = true
+size = Vector3(1, 1.50537, 2.99863)
+material = ExtResource("1_1gk4j")
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="."]
+transform = Transform3D(10.2928, 0, 0, 0, 1.8618, -2.65731, 0, 0.267328, 18.5068, -4.41182, 257.834, 31.8833)
+use_collision = true
+size = Vector3(1, 49.3025, 0.352831)
+material = ExtResource("1_1gk4j")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="."]
+transform = Transform3D(10.2928, 0, 0, 0, 1.38393, 0, 0, 0, 2.8512, -4.41182, 208.314, -23.3865)
+use_collision = true
+size = Vector3(1, 2.1806, 2.99863)
+material = ExtResource("1_1gk4j")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="."]
+transform = Transform3D(3.76856, 0, 0, 0, 1.8809, 0, 0, 0, 14.0479, -8.77957, 248.387, 10.3495)
+use_collision = true
+size = Vector3(1.60645, 44.0531, 3.45049)
+material = ExtResource("1_1gk4j")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="."]
+transform = Transform3D(3.76856, 0, 0, 0, 1.8809, 0, 0, 0, 14.0479, 0.558066, 248.623, 10.7542)
+use_collision = true
+size = Vector3(1.95227, 44.3049, 3.5081)
+material = ExtResource("1_1gk4j")
+
 [node name="CSGBox3D4" type="CSGBox3D" parent="."]
 transform = Transform3D(11.1806, 0, 0, 0, 22.0228, 0, 0, 0, 2.8512, -4.42303, 248.719, 60.7644)
 use_collision = true
@@ -39,7 +117,6 @@ material = ExtResource("1_1gk4j")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.29126, 207.174, 58.7446)
 grabpack_version = 1
 has_flashlight = true
-defualt_hand = 1
 red_hand = true
 flare_hand = true
 dash_hand = true
@@ -84,7 +161,46 @@ transform = Transform3D(1, 0, 0, 0, -0.999374, 0.0353705, 0, -0.0353705, -0.9993
 transform = Transform3D(2.3441, 0, 0, 0, 24.8217, 0.00776972, 0, -0.324065, 0.59512, -3.51296, 206.654, 34.7269)
 
 [node name="Race Car" parent="." instance=ExtResource("9_guaxo")]
-transform = Transform3D(-1.2044, 0, 5.1469e-07, 0, 1.99729, 0, -1.05292e-07, 0, -5.88737, -4.1229, 207.908, 19.0389)
+transform = Transform3D(-1, 0, 1.50996e-06, 0, 1, 0, -1.50996e-07, 0, -10, -4.46269, 207.313, 3.40962)
+
+[node name="Race Car2" parent="." instance=ExtResource("9_guaxo")]
+transform = Transform3D(-0.00358801, 0, -9.97947, 0, 1, 0, 2.3358, 0, -0.0153295, -30.4025, 207.313, -16.4739)
+
+[node name="Battery Socket" parent="." instance=ExtResource("10_qkch6")]
+transform = Transform3D(-0.00324628, 0, 0.999995, 0, 1, 0, -0.999995, 0, -0.00324628, 0.734579, 209.435, -22.3736)
+
+[node name="battery" parent="." instance=ExtResource("11_hcnrv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4588, 207.139, -23.3116)
+
+[node name="Large Gate2" parent="." instance=ExtResource("6_u420b")]
+transform = Transform3D(0.00127406, 0.999999, 4.37114e-08, 0, -4.37114e-08, 1, 0.999999, -0.00127406, -5.56912e-11, 2.88697, 207.139, -26.7603)
+
+[node name="Large Gate3" parent="." instance=ExtResource("6_u420b")]
+transform = Transform3D(0.999995, 0.0031242, 1.36559e-10, -3.46944e-18, -4.37114e-08, 1, 0.0031242, -0.999995, -4.37112e-08, 0.217703, 207.139, -29.6705)
+
+[node name="Large Gate4" parent="." instance=ExtResource("6_u420b")]
+transform = Transform3D(-0.999978, 0.00664963, 2.90668e-10, -6.91108e-19, -4.37114e-08, 1, 0.00664963, 0.999978, 4.37104e-08, 4.72349, 207.139, -29.4601)
+
+[node name="green_source" parent="." instance=ExtResource("12_qi35j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4457, 208.403, -31.9408)
+
+[node name="green_reciever" parent="." instance=ExtResource("13_fo81v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.55227, 209.462, -31.9332)
+
+[node name="green_reciever2" parent="." instance=ExtResource("13_fo81v")]
+transform = Transform3D(0.00664964, 0, 0.999978, 0, 1, 0, -0.999978, 0, 0.00664964, -1.96246, 208.486, -29.7649)
+
+[node name="Grab Turret" parent="." instance=ExtResource("14_8f83v")]
+transform = Transform3D(0.02178, 0, -0.999763, 0, 1, 0, 0.999763, 0, 0.02178, 12.1075, 207.139, -29.1742)
+target_level = "res://Maps/Chapter1/c1-4.tscn"
+
+[node name="Lever" parent="." instance=ExtResource("15_o2ek4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4486, 207.139, -29.6294)
 
 [connection signal="obstacle_openned" from="PlaywatchCams/playwatch_camera" to="Large Gate" method="_on_playwatch_camera_obstacle_openned"]
 [connection signal="obstacle_openned" from="PlaywatchCams/playwatch_camera2" to="Gate" method="_on_playwatch_camera_2_obstacle_openned"]
+[connection signal="battery_placed" from="Battery Socket" to="Large Gate2" method="_on_battery_socket_battery_placed"]
+[connection signal="battery_removed" from="Battery Socket" to="Large Gate2" method="_on_battery_socket_battery_removed"]
+[connection signal="power_recieved" from="green_reciever" to="Large Gate3" method="_on_green_reciever_power_recieved"]
+[connection signal="power_recieved" from="green_reciever2" to="Large Gate4" method="_on_green_reciever_2_power_recieved"]
+[connection signal="pulled" from="Lever" to="Grab Turret" method="_on_lever_pulled"]

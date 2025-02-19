@@ -53,3 +53,15 @@ func _on_collectable_hand_3_collected() -> void:
 
 func _on_playwatch_camera_obstacle_openned() -> void:
 	_open()
+
+
+func _on_battery_socket_battery_placed() -> void:
+	_open()
+
+
+func _on_battery_socket_battery_removed() -> void:
+	_close()
+
+
+func _on_green_reciever_2_power_recieved() -> void:
+	_open()

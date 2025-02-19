@@ -345,7 +345,7 @@ offset_right = 660.0
 offset_bottom = 111.0
 theme = ExtResource("6_m5i1f")
 theme_override_font_sizes/font_size = 50
-text = "[REPLAY ENCOUNTER]"
+text = "[SELECT CHAPTER]"
 vertical_alignment = 1
 
 [node name="replaytitle" type="Label" parent="replay_encounter"]

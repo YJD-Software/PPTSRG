@@ -230,7 +230,7 @@ transform = Transform3D(-0.999996, 8.98696e-06, 0.00284479, 0.0028448, 0.0031590
 
 [node name="Grab Turret" parent="." instance=ExtResource("12_wse7p")]
 transform = Transform3D(-0.999308, -0.0195061, -0.0316759, -0.0205067, 0.999291, 0.0315779, 0.0310375, 0.0322053, -0.998999, -0.321347, 8.57882, -40.356)
-target_level = "res://Maps/Chapter1/c1-2.tscn"
+target_level = "res://Maps/Chapter1/c1-3.tscn"
 
 [node name="VHS TV" parent="." instance=ExtResource("15_ve5ok")]
 transform = Transform3D(1, 0, 0, 0, 0.99598, -0.0895723, 0, 0.0895723, 0.99598, -0.00902369, 0.527363, -5.94863)
