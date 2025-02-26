@@ -40,7 +40,6 @@ func _input(event):
 		else:
 			if randi_range(1, 2) == 1:
 				leave1.play()
-				_john()
 			else:
 				leave2.play()
 			get_tree().call_group("player", "_enable_movement", true)
@@ -48,11 +47,9 @@ func _input(event):
 			get_tree().call_group("player", "_take_camera_control")
 			ui.visible = false
 			using = false
-			_john()
 	if Input.is_action_just_released("left_hand") and using:
 		if randi_range(1, 2) == 1:
 			leave1.play()
-			_john()
 		else:
 			leave2.play()
 		get_tree().call_group("player", "_enable_movement", true)
@@ -60,7 +57,6 @@ func _input(event):
 		get_tree().call_group("player", "_take_camera_control")
 		ui.visible = false
 		using = false
-		_john()
 	if using:
 		if event is InputEventMouseMotion:
 			base.rotate_y(deg_to_rad(-event.relative.x * MOUSE_SENS))
@@ -114,7 +110,3 @@ func _john():
 		_fire_hand()
 	else:
 		_release_hand()
-
-
-func _on_playwatch_camera_obstacle_openned() -> void:
-	_john()

@@ -541,7 +541,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.320224, 0.384871, 0.015912
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00146383, 1.05321, 0.174841)
 
 [node name="Camera3D" type="Camera3D" parent="base/hinge"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.714, -0.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02272, 0.0332897)
 
 [node name="hand_cast" type="RayCast3D" parent="base/hinge/Camera3D"]
 target_position = Vector3(0, 0, -30)
@@ -860,9 +860,9 @@ shape = SubResource("BoxShape3D_stb1e")
 
 [node name="Lever" parent="." instance=ExtResource("5_kyt0x")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.16237, 0.00798374, 0.412661)
-visible = false
+collision_layer = 29
+collision_mask = 0
 lever_type = 1
-unavailable = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
