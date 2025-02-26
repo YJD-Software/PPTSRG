@@ -1,4 +1,5 @@
 Built with Grabpack in Godot
+(Note. the MIT Licence Came from Grabpack in Godot. it is kept here because yes)
 
 Poppy Playtime Speedrunning Game is a Poppy Playtime Fangame Dedicated to All the Poppy Playtime Speedrunners.
 
