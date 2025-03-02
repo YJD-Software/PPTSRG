@@ -9,7 +9,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	_skipvideo()
 
 
 func _on_video_stream_player_finished() -> void:
@@ -19,3 +19,4 @@ func _on_video_stream_player_finished() -> void:
 func _skipvideo():
 	if Input.is_action_just_pressed("jump"):
 		LoadManagement.load_scene(nextmap)
+		$VideoStreamPlayer.stop()

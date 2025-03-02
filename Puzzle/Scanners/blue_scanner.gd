@@ -31,6 +31,8 @@ func _on_det_l_area_entered(area):
 func _process(delta):
 	if not powered:
 		light.visible = false
+	else:
+		light.visible = true
 	
 	if scanning:
 		light.visible = true
@@ -48,3 +50,12 @@ func _on_scan_time_timeout():
 	finished = true
 	scanning = false
 	emit_signal("scan_complete")
+
+
+func _on_large_gate_opened() -> void:
+	powered = false
+
+
+func _on_large_gate_closed() -> void:
+	powered = true
+	finished = false

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c7jw51nkyegxq"]
 
-[ext_resource type="VideoStream" path="res://Game/Menu/videos/PPTSRINTRO.ogv" id="1_1eou5"]
 [ext_resource type="Script" path="res://Maps/Chapter1/video.gd" id="1_fqvv5"]
+[ext_resource type="VideoStream" path="res://Game/Menu/videos/missioncomplete.ogv" id="2_e8jps"]
 
 [node name="Bootup1" type="Control"]
 layout_mode = 3
@@ -18,7 +18,7 @@ layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1088.0
 scale = Vector2(0.6, 0.6)
-stream = ExtResource("1_1eou5")
+stream = ExtResource("2_e8jps")
 autoplay = true
 
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

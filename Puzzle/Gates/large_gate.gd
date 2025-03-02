@@ -65,3 +65,11 @@ func _on_battery_socket_battery_removed() -> void:
 
 func _on_green_reciever_2_power_recieved() -> void:
 	_open()
+
+
+func _on_blue_scanner_scan_complete() -> void:
+	_open()
+
+
+func _on_red_scanner_scan_complete() -> void:
+	_close()

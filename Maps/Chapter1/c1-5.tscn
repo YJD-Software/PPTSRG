@@ -1,0 +1,118 @@
+[gd_scene load_steps=6 format=3 uid="uid://dx83q5v06cjxk"]
+
+[ext_resource type="PackedScene" uid="uid://dvta8brabrr7p" path="res://CC4Models/PoppyPlaytimeChapter1Walls.fbx" id="1_ad8y1"]
+[ext_resource type="PackedScene" uid="uid://wipogv674odr" path="res://Player/player.tscn" id="2_usdcc"]
+[ext_resource type="PackedScene" uid="uid://b6jhnelyu0cjv" path="res://Puzzle/Gates/large_gate.tscn" id="3_v5f6m"]
+[ext_resource type="PackedScene" uid="uid://c5k6rffr7xs1b" path="res://Puzzle/Scanners/blue_scanner.tscn" id="4_yie0i"]
+[ext_resource type="PackedScene" uid="uid://147a8f65buiy" path="res://Puzzle/Scanners/red_scanner.tscn" id="5_urmrs"]
+
+[node name="C1-5" type="Node3D"]
+
+[node name="PoppyPlaytimeChapter1Walls" parent="." instance=ExtResource("1_ad8y1")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_usdcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -117.689, 0.774504, 0.0686625)
+has_flashlight = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.4537, -0.504511, -77.5473)
+use_collision = true
+size = Vector3(236.464, 1, 335.796)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -26.6358, 15.4264, 5.31171)
+spot_range = 37.117
+spot_angle = 100.0
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -26.6358, 15.4264, -5.15909)
+spot_range = 37.117
+spot_angle = 100.0
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 26.8318, 15.4264, 5.31171)
+spot_range = 37.117
+spot_angle = 100.0
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 26.8318, 15.4264, -5.15909)
+spot_range = 37.117
+spot_angle = 100.0
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.00619587, -0.999981, -4.37105e-08, -1.10959e-16, -4.37114e-08, 1, -0.999981, 0.00619587, 2.7083e-10, 5.1832, 15.4264, -26.7521)
+spot_range = 37.117
+spot_angle = 100.0
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.00619587, -0.999981, -4.37105e-08, -1.10959e-16, -4.37114e-08, 1, -0.999981, 0.00619587, 2.7083e-10, -5.2874, 15.4264, -26.6872)
+spot_range = 37.117
+spot_angle = 100.0
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.00619587, -0.999981, -4.37106e-08, -1.10959e-16, -4.37114e-08, 1, -0.999981, 0.00619587, 2.7083e-10, 5.1832, 15.4264, 26.6727)
+spot_range = 37.117
+spot_angle = 100.0
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.00619587, -0.999981, -4.37106e-08, -1.10959e-16, -4.37114e-08, 1, -0.999981, 0.00619587, 2.7083e-10, -5.2874, 15.4264, 26.7375)
+spot_range = 37.117
+spot_angle = 100.0
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="."]
+transform = Transform3D(0.700797, 0.713361, 3.1182e-08, 0, -4.37114e-08, 1, 0.713361, -0.700797, -3.06328e-08, -22.424, 15.4264, -15.2846)
+spot_range = 37.117
+spot_angle = 100.0
+
+[node name="SpotLight3D10" type="SpotLight3D" parent="."]
+transform = Transform3D(0.700797, 0.713361, 3.1182e-08, 0, -4.37114e-08, 1, 0.713361, -0.700797, -3.06328e-08, -14.9546, 15.4264, -22.6225)
+spot_range = 37.117
+spot_angle = 100.0
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="."]
+transform = Transform3D(0.700797, 0.713361, 3.1182e-08, 0, -4.37114e-08, 1, 0.713361, -0.700797, -3.06328e-08, 15.0459, 15.4264, 22.8571)
+spot_range = 37.117
+spot_angle = 100.0
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="."]
+transform = Transform3D(0.700797, 0.713361, 3.1182e-08, 0, -4.37114e-08, 1, 0.713361, -0.700797, -3.06328e-08, 22.5154, 15.4264, 15.5192)
+spot_range = 37.117
+spot_angle = 100.0
+
+[node name="SpotLight3D13" type="SpotLight3D" parent="."]
+transform = Transform3D(0.709005, -0.705204, -3.08254e-08, -1.10959e-16, -4.37114e-08, 1, -0.705204, -0.709005, -3.09916e-08, 22.7478, 15.4264, -15.0564)
+spot_range = 37.117
+spot_angle = 100.0
+
+[node name="SpotLight3D14" type="SpotLight3D" parent="."]
+transform = Transform3D(0.709005, -0.705204, -3.08254e-08, -1.10959e-16, -4.37114e-08, 1, -0.705204, -0.709005, -3.09916e-08, 15.3637, 15.4264, -22.4802)
+spot_range = 37.117
+spot_angle = 100.0
+
+[node name="SpotLight3D15" type="SpotLight3D" parent="."]
+transform = Transform3D(0.709005, -0.705204, -3.08254e-08, -1.10959e-16, -4.37114e-08, 1, -0.705204, -0.709005, -3.09916e-08, -15.3634, 15.4264, 22.3836)
+spot_range = 37.117
+spot_angle = 100.0
+
+[node name="SpotLight3D16" type="SpotLight3D" parent="."]
+transform = Transform3D(0.709005, -0.705204, -3.08254e-08, -1.10959e-16, -4.37114e-08, 1, -0.705204, -0.709005, -3.09916e-08, -22.7474, 15.4264, 14.9597)
+spot_range = 37.117
+spot_angle = 100.0
+
+[node name="Large Gate" parent="." instance=ExtResource("3_v5f6m")]
+transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, 3.5, 0, -3.5, -1.5299e-07, -56.7551, -1.10489, -0.243874)
+
+[node name="Blue Scanner" parent="." instance=ExtResource("4_yie0i")]
+transform = Transform3D(-1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, -58.225, 10.8427, -5.98371)
+
+[node name="Red Scanner" parent="." instance=ExtResource("5_urmrs")]
+transform = Transform3D(-1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, -58.225, -12.2121, 5.777)
+powered = false
+
+[connection signal="closed" from="Large Gate" to="Blue Scanner" method="_on_large_gate_closed"]
+[connection signal="closed" from="Large Gate" to="Red Scanner" method="_on_large_gate_closed"]
+[connection signal="opened" from="Large Gate" to="Blue Scanner" method="_on_large_gate_opened"]
+[connection signal="scan_complete" from="Blue Scanner" to="Large Gate" method="_on_blue_scanner_scan_complete"]
+[connection signal="scan_complete" from="Blue Scanner" to="Red Scanner" method="_on_blue_scanner_scan_complete"]
+[connection signal="scan_complete" from="Red Scanner" to="Large Gate" method="_on_red_scanner_scan_complete"]

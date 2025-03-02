@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://umft1vb3u8io"]
+[gd_scene load_steps=11 format=3 uid="uid://umft1vb3u8io"]
 
 [ext_resource type="Script" path="res://Game/Menu/Menus/settings.gd" id="1_a2klg"]
 [ext_resource type="Shader" path="res://Game/Menu/Shader/blur.gdshader" id="2_fdmk4"]
 [ext_resource type="Theme" uid="uid://dv4qrnr0ds2w6" path="res://Game/Menu/theme/menu.tres" id="3_urlqi"]
+[ext_resource type="Script" path="res://Game/Menu/Menus/setres.gd" id="4_dhsi2"]
 [ext_resource type="Script" path="res://Game/Menu/SFX/btn_sfx.gd" id="4_ihtxr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pr8yn"]
@@ -103,28 +104,16 @@ anchor_bottom = 0.921296
 metadata/_edit_use_anchors_ = true
 
 [node name="audio" type="Button" parent="buttons"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
 anchor_left = 0.0470219
-anchor_top = 0.0518868
+anchor_top = 0.226415
 anchor_right = 0.959248
-anchor_bottom = 0.212264
+anchor_bottom = 0.386793
 offset_bottom = 2.0
 theme = ExtResource("3_urlqi")
 theme_override_font_sizes/font_size = 23
 text = "AUDIO"
-alignment = 0
-metadata/_edit_use_anchors_ = true
-
-[node name="display" type="Button" parent="buttons"]
-layout_mode = 0
-anchor_left = 0.0470219
-anchor_top = 0.231132
-anchor_right = 0.959248
-anchor_bottom = 0.391509
-offset_bottom = 2.0
-theme = ExtResource("3_urlqi")
-theme_override_font_sizes/font_size = 23
-text = "RENDERER"
 alignment = 0
 metadata/_edit_use_anchors_ = true
 
@@ -239,7 +228,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="display" type="Control" parent="setting"]
-visible = false
 anchors_preset = 0
 offset_left = 4.0
 offset_top = 93.0
@@ -253,7 +241,17 @@ offset_right = 696.0
 offset_bottom = 98.0
 theme = ExtResource("3_urlqi")
 theme_override_font_sizes/font_size = 22
-text = "DISPLAY SETTING EXAMPLE :O"
+text = "Fullscreen Toggle"
+alignment = 0
+
+[node name="example2" type="Button" parent="setting/display"]
+layout_mode = 0
+offset_top = 102.0
+offset_right = 696.0
+offset_bottom = 145.0
+theme = ExtResource("3_urlqi")
+theme_override_font_sizes/font_size = 22
+text = "Fullscreen Toggle"
 alignment = 0
 
 [node name="example_div" type="Label" parent="setting/display"]
@@ -271,36 +269,121 @@ offset_top = 418.0
 offset_right = 692.0
 offset_bottom = 492.0
 theme = ExtResource("3_urlqi")
-text = "DISPLAY related settings"
+text = "Renderer Settings"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="graphics" type="Control" parent="setting"]
+visible = false
 anchors_preset = 0
 offset_left = 4.0
 offset_top = 93.0
 offset_right = 696.0
 offset_bottom = 486.0
 
-[node name="example" type="Button" parent="setting/graphics"]
+[node name="HD" type="Button" parent="setting/graphics"]
 layout_mode = 0
-offset_top = 55.0
+offset_top = 152.0
 offset_right = 696.0
-offset_bottom = 98.0
+offset_bottom = 195.0
 theme = ExtResource("3_urlqi")
 theme_override_font_sizes/font_size = 22
-text = "1280 x 720"
+text = "HD 1280 x 720"
 alignment = 0
+script = ExtResource("4_dhsi2")
+Horiz = 1280
+Verti = 720
 
-[node name="example2" type="Button" parent="setting/graphics"]
+[node name="WSVGA" type="Button" parent="setting/graphics"]
 layout_mode = 0
-offset_top = 104.0
+offset_top = 105.0
 offset_right = 696.0
-offset_bottom = 147.0
+offset_bottom = 148.0
 theme = ExtResource("3_urlqi")
 theme_override_font_sizes/font_size = 22
-text = "1366 x 768"
+text = "WSVGA 1024 x 576"
 alignment = 0
+script = ExtResource("4_dhsi2")
+Horiz = 1024
+Verti = 576
+
+[node name="qHD" type="Button" parent="setting/graphics"]
+layout_mode = 0
+offset_top = 58.0
+offset_right = 696.0
+offset_bottom = 101.0
+theme = ExtResource("3_urlqi")
+theme_override_font_sizes/font_size = 22
+text = "qHD 960 x 540"
+alignment = 0
+script = ExtResource("4_dhsi2")
+Horiz = 960
+Verti = 540
+
+[node name="FWXGA" type="Button" parent="setting/graphics"]
+layout_mode = 0
+offset_top = 199.0
+offset_right = 696.0
+offset_bottom = 242.0
+theme = ExtResource("3_urlqi")
+theme_override_font_sizes/font_size = 22
+text = "FWXGA 1366 x 768"
+alignment = 0
+script = ExtResource("4_dhsi2")
+Horiz = 1366
+Verti = 768
+
+[node name="HD+" type="Button" parent="setting/graphics"]
+layout_mode = 0
+offset_top = 246.0
+offset_right = 696.0
+offset_bottom = 289.0
+theme = ExtResource("3_urlqi")
+theme_override_font_sizes/font_size = 22
+text = "HD+ 1600 x 900"
+alignment = 0
+script = ExtResource("4_dhsi2")
+Horiz = 1600
+Verti = 900
+
+[node name="Full HD" type="Button" parent="setting/graphics"]
+layout_mode = 0
+offset_top = 294.0
+offset_right = 696.0
+offset_bottom = 337.0
+theme = ExtResource("3_urlqi")
+theme_override_font_sizes/font_size = 22
+text = "Full HD 1920 x 1080"
+alignment = 0
+script = ExtResource("4_dhsi2")
+Horiz = 1920
+Verti = 1080
+
+[node name="QHD" type="Button" parent="setting/graphics"]
+layout_mode = 0
+offset_top = 341.0
+offset_right = 696.0
+offset_bottom = 384.0
+theme = ExtResource("3_urlqi")
+theme_override_font_sizes/font_size = 22
+text = "QHD 2560 x 1440"
+alignment = 0
+script = ExtResource("4_dhsi2")
+Horiz = 2560
+Verti = 1440
+
+[node name="4K UHD" type="Button" parent="setting/graphics"]
+layout_mode = 0
+offset_top = 387.0
+offset_right = 696.0
+offset_bottom = 430.0
+theme = ExtResource("3_urlqi")
+theme_override_font_sizes/font_size = 22
+text = "4K UHD 3840 x 2160"
+alignment = 0
+script = ExtResource("4_dhsi2")
+Horiz = 3840
+Verti = 2160
 
 [node name="example_div" type="Label" parent="setting/graphics"]
 layout_mode = 0
@@ -492,7 +575,6 @@ libraries = {
 }
 
 [connection signal="pressed" from="buttons/audio" to="." method="_on_audio_pressed"]
-[connection signal="pressed" from="buttons/display" to="." method="_on_display_pressed"]
 [connection signal="pressed" from="buttons/graphics" to="." method="_on_graphics_pressed"]
 [connection signal="pressed" from="buttons/controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="buttons/language" to="." method="_on_language_pressed"]

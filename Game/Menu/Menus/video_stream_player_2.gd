@@ -8,7 +8,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_just_pressed("jump"):
+		LoadManagement.load_scene("res://Game/Menu/Menus/main_title.tscn")
 
 
 func _on_video_stream_player_finished() -> void:
