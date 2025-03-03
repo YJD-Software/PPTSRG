@@ -20586,7 +20586,7 @@ speed_scale = 1.667
 wait_time = 0.06
 
 [node name="left_attachment_new" type="BoneAttachment3D" parent="neck/head/grabpack_1/scale/pack_nodes/NewGrabpack"]
-transform = Transform3D(0.00249999, 3.77464e-10, 3.77514e-10, -3.77489e-10, -1.66923e-07, 0.00249999, 3.77489e-10, -0.00249999, -1.66923e-07, 0.134339, -0.205085, -0.0892179)
+transform = Transform3D(0.0025, 3.77464e-10, 3.77514e-10, -3.77489e-10, -1.66923e-07, 0.00249999, 3.77489e-10, -0.00249999, -1.66923e-07, 0.134339, -0.205085, -0.0892179)
 bone_name = "JNT_L_HandAttachment_Pivot_024"
 bone_idx = 31
 use_external_skeleton = true
@@ -20599,7 +20599,7 @@ transform = Transform3D(400, -6.03985e-05, 6.03984e-05, 6.03945e-05, -0.0267078,
 transform = Transform3D(400, 0, 0, 0, 400, 0, 0, 0, 400, 0, 0, 0)
 
 [node name="right_attachment_new" type="BoneAttachment3D" parent="neck/head/grabpack_1/scale/pack_nodes/NewGrabpack"]
-transform = Transform3D(0.00249999, -3.77463e-10, -3.77514e-10, -3.77489e-10, 1.66923e-07, -0.00249999, 3.77489e-10, 0.00249999, 1.66923e-07, -0.134339, -0.203569, -0.0892178)
+transform = Transform3D(0.0025, -3.77463e-10, -3.77514e-10, -3.77489e-10, 1.66923e-07, -0.00249999, 3.77489e-10, 0.00249999, 1.66923e-07, -0.13434, -0.203569, -0.0892178)
 bone_name = "JNT_R_HandAttachment_Pivot_014"
 bone_idx = 18
 use_external_skeleton = true
@@ -20612,7 +20612,7 @@ transform = Transform3D(399.997, 3.63798e-12, 9.72067e-12, 1.42775e-12, -1.74884
 transform = Transform3D(400, 0, 0, 0, 400, 0, 0, 0, 400, 0, 0, 0)
 
 [node name="Playwatch" type="BoneAttachment3D" parent="neck/head/grabpack_1/scale/pack_nodes/NewGrabpack"]
-transform = Transform3D(0.00249999, 3.77464e-10, 1.58958e-10, -1.58933e-10, -1.66446e-07, 0.00249999, 3.77475e-10, -0.00249999, -1.66446e-07, 0.134339, -0.136496, -0.0892027)
+transform = Transform3D(0.0025, 3.77464e-10, 1.58958e-10, -1.58933e-10, -1.66446e-07, 0.00249999, 3.77475e-10, -0.00249999, -1.66446e-07, 0.134339, -0.136496, -0.0892027)
 bone_name = "JNT_L_Grabpack_Gun_016"
 bone_idx = 21
 use_external_skeleton = true

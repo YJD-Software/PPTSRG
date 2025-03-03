@@ -242,9 +242,7 @@ theme_override_constants/line_spacing = 6
 theme_override_constants/outline_size = 1
 theme_override_font_sizes/font_size = 36
 text = "International Playtime Co Revival Project (IPRP) has
-Hired All of You on Board. We Recommend Becoming
-Familliar With All Movement Tech Before Entering.
-Need be Aware"
+Hired All of You on Board."
 
 [node name="version" type="Label" parent="."]
 layout_mode = 0
@@ -264,37 +262,35 @@ anchor_left = 0.023
 anchor_top = 0.571
 anchor_right = 0.33
 anchor_bottom = 0.931
-offset_left = -0.496002
-offset_top = -0.00802612
-offset_right = -0.160004
-offset_bottom = -0.288025
+offset_left = -26.496
+offset_top = 25.992
+offset_right = -26.16
+offset_bottom = 25.712
 script = ExtResource("7_kw4i5")
 
 [node name="continue" type="Button" parent="buttons"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.031
-offset_left = 29.0
-offset_top = -12.0
-offset_right = 309.026
-offset_bottom = 22.0
+offset_left = 54.0
+offset_top = -35.0
+offset_right = 293.026
+offset_bottom = 7.0
 theme = ExtResource("3_8ihiw")
-theme_override_font_sizes/font_size = 22
+theme_override_font_sizes/font_size = 39
 text = "CONTINUE"
-alignment = 0
 
 [node name="newgame" type="Button" parent="buttons"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.031
-offset_left = 29.0
-offset_top = 26.0
-offset_right = 309.026
-offset_bottom = 60.0
+offset_left = 54.0
+offset_top = -80.0
+offset_right = 293.026
+offset_bottom = -38.0
 theme = ExtResource("3_8ihiw")
-theme_override_font_sizes/font_size = 22
+theme_override_font_sizes/font_size = 39
 text = "NEW GAME"
-alignment = 0
 script = ExtResource("8_dio0e")
 game = "res://Maps/Chapter1/c1-1.tscn"
 
@@ -302,52 +298,51 @@ game = "res://Maps/Chapter1/c1-1.tscn"
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.031
-offset_left = 29.0
-offset_top = 64.0
-offset_right = 309.026
+offset_left = 54.0
+offset_top = 10.0
+offset_right = 293.026
 offset_bottom = 98.0
 theme = ExtResource("3_8ihiw")
-theme_override_font_sizes/font_size = 22
-text = "REPLAY ENCOUNTER"
-alignment = 0
+theme_override_font_sizes/font_size = 39
+text = "REPLAY
+ENCOUNTER"
 
 [node name="settings" type="Button" parent="buttons"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.031
-offset_left = 29.0
-offset_top = 102.0
-offset_right = 309.026
-offset_bottom = 136.0
+offset_left = 54.0
+offset_top = 101.0
+offset_right = 293.026
+offset_bottom = 143.0
 theme = ExtResource("3_8ihiw")
-theme_override_font_sizes/font_size = 22
+theme_override_font_sizes/font_size = 39
 text = "SETTINGS"
-alignment = 0
 
 [node name="credits" type="Button" parent="buttons"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.031
-offset_left = 29.0
-offset_top = 140.0
-offset_right = 309.026
-offset_bottom = 174.0
+offset_left = 54.0
+offset_top = 146.0
+offset_right = 293.026
+offset_bottom = 188.0
 theme = ExtResource("3_8ihiw")
-theme_override_font_sizes/font_size = 22
+theme_override_font_sizes/font_size = 39
 text = "CREDITS"
-alignment = 0
 
 [node name="quit" type="Button" parent="buttons"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.031
-offset_left = 29.0
-offset_top = 179.0
-offset_right = 309.026
-offset_bottom = 213.0
+offset_left = 874.0
+offset_top = 212.0
+offset_right = 1135.03
+offset_bottom = 246.0
 theme = ExtResource("3_8ihiw")
 theme_override_font_sizes/font_size = 22
 text = "RETURN TO MAIN MENU"
+flat = true
 alignment = 0
 script = ExtResource("8_hkorf")
 level_path = "res://Game/Menu/Menus/main_title.tscn"

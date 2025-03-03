@@ -8,6 +8,7 @@ var load_value = 0.0
 
 func _update_progress_bar(new_value: float) -> void:
 	load_value = new_value * 100
+	$Panel/VideoStreamPlayer/ProgressBar.value = load_value
 	if load_value == 100:
 		_start_outro_animation()
 
