@@ -1,6 +1,6 @@
 [gd_scene load_steps=83 format=4 uid="uid://b1synj2xgx754"]
 
-[ext_resource type="Script" path="res://Level/demo_scene.gd" id="1_o3h6j"]
+[ext_resource type="Script" uid="uid://cme2w4j1a1mw1" path="res://Level/demo_scene.gd" id="1_o3h6j"]
 [ext_resource type="PackedScene" uid="uid://wipogv674odr" path="res://Player/player.tscn" id="1_y6ybj"]
 [ext_resource type="Texture2D" uid="uid://cnbqxi5aoxl4k" path="res://Level/Environment/Objects/Piston/piston_b_Image_3.png" id="2_8fpla"]
 [ext_resource type="Texture2D" uid="uid://c6a22rtwtqmqb" path="res://Level/Environment/Objects/Piston/piston_b_Image_4_3.png" id="3_ak2mp"]
@@ -18,26 +18,26 @@
 [ext_resource type="PackedScene" uid="uid://c5k6rffr7xs1b" path="res://Puzzle/Scanners/blue_scanner.tscn" id="18_s35dw"]
 [ext_resource type="Texture2D" uid="uid://crnu4ixplgnfc" path="res://Level/Environment/Objects/Box Letters/box_letters_Image_0.png" id="19_6w8n0"]
 [ext_resource type="PackedScene" uid="uid://c7h4vgpq7wn2j" path="res://Puzzle/Handle/grapple_handle.tscn" id="19_acbyl"]
-[ext_resource type="Script" path="res://Game/Scripts/draggable3d.gd" id="19_qoi3l"]
+[ext_resource type="Script" uid="uid://dklpm7q2ojoks" path="res://Game/Scripts/draggable3d.gd" id="19_qoi3l"]
 [ext_resource type="PackedScene" uid="uid://b6jhnelyu0cjv" path="res://Puzzle/Gates/large_gate.tscn" id="20_jajkj"]
 [ext_resource type="PackedScene" uid="uid://cgfr84c3rrtym" path="res://Puzzle/Doors/door.tscn" id="20_phgs6"]
 [ext_resource type="Texture2D" uid="uid://buljjyks3fblf" path="res://Level/Environment/Objects/Box Letters/box_letters_Image_2.png" id="20_v4awl"]
 [ext_resource type="PackedScene" uid="uid://cu72dk6n7aaco" path="res://Item/Grabpack/grabpack_item.tscn" id="21_6y8sb"]
 [ext_resource type="PackedScene" uid="uid://bjhse55dlsf0a" path="res://Item/Grabpack/playwatch.tscn" id="21_ci0ym"]
 [ext_resource type="PackedScene" uid="uid://ds0xuh6jlgnl1" path="res://Item/Vhs/vhs_player.tscn" id="22_6xpmf"]
-[ext_resource type="Script" path="res://Puzzle/Playwatch Camera/playwatch_cameras.gd" id="23_hq7xv"]
+[ext_resource type="Script" uid="uid://ds5n2mjrr0w3" path="res://Puzzle/Playwatch Camera/playwatch_cameras.gd" id="23_hq7xv"]
 [ext_resource type="PackedScene" uid="uid://0ityjxe6w7c0" path="res://Item/Vhs/vhs_tape.tscn" id="23_qliqo"]
 [ext_resource type="PackedScene" uid="uid://cnp4xletrofhp" path="res://Puzzle/Playwatch Camera/playwatch_camera.tscn" id="24_betoh"]
 [ext_resource type="PackedScene" uid="uid://bwwpyi58q6o0t" path="res://Item/Vhs/vhs_tv.tscn" id="24_qweid"]
-[ext_resource type="VideoStream" path="res://Item/Vhs/Video/Poppy Playtime_ Chapter 4 - New Hand VHS Tutorial.ogv" id="25_02lwy"]
+[ext_resource type="VideoStream" uid="uid://bbyga5jp3ohr2" path="res://Item/Vhs/Video/Poppy Playtime_ Chapter 4 - New Hand VHS Tutorial.ogv" id="25_02lwy"]
 [ext_resource type="AudioStream" uid="uid://djxgcsx8dsmk2" path="res://Item/Vhs/Video/Poppy Playtime_ Chapter 4 - New Hand VHS Tutorial.mp3" id="26_hx8p8"]
 [ext_resource type="PackedScene" uid="uid://cux068o67jh01" path="res://Item/Grabpack/Hands/hand_item.tscn" id="27_gtrrr"]
 [ext_resource type="PackedScene" uid="uid://bj8oeqdjcnfts" path="res://Puzzle/Dash Panel/dash_panel.tscn" id="28_7gd3n"]
 [ext_resource type="PackedScene" uid="uid://bghr8effdjgcs" path="res://Puzzle/Race Car/racecar.tscn" id="31_5cxjm"]
 [ext_resource type="PackedScene" uid="uid://bllcv4jda6hvb" path="res://Puzzle/Race Car/examplebox.tscn" id="32_c08ry"]
-[ext_resource type="Script" path="res://Game/Scripts/kill_box.gd" id="32_vcyq0"]
-[ext_resource type="Script" path="res://Game/Scripts/eventrigger.gd" id="33_1ojco"]
-[ext_resource type="Script" path="res://Game/Scripts/critterspawn.gd" id="33_a0188"]
+[ext_resource type="Script" uid="uid://bp5cx31k3hsm2" path="res://Game/Scripts/kill_box.gd" id="32_vcyq0"]
+[ext_resource type="Script" uid="uid://8083iqrl1log" path="res://Game/Scripts/eventrigger.gd" id="33_1ojco"]
+[ext_resource type="Script" uid="uid://dcnrnpw8uwcg1" path="res://Game/Scripts/critterspawn.gd" id="33_a0188"]
 [ext_resource type="PackedScene" uid="uid://byxcjqdl02iud" path="res://Puzzle/Green Power/green_reciever.tscn" id="34_nkdh8"]
 [ext_resource type="PackedScene" uid="uid://bechbsgfmthff" path="res://Puzzle/Green Power/green_source.tscn" id="35_fwarc"]
 [ext_resource type="PackedScene" uid="uid://rryth3f4cou" path="res://Puzzle/Battery/battery.tscn" id="36_2uxqm"]
@@ -190,8 +190,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qdk1l"]
 _data = {
-"RESET": SubResource("Animation_kdgh6"),
-"loop": SubResource("Animation_0njwy")
+&"RESET": SubResource("Animation_kdgh6"),
+&"loop": SubResource("Animation_0njwy")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_87wjc"]
@@ -227,7 +227,7 @@ albedo_texture = ExtResource("19_6w8n0")
 normal_enabled = true
 normal_texture = ExtResource("20_v4awl")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_u6phd"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_i0vg8"]
 _surfaces = [{
 "aabb": AABB(-0.743325, -0.748745, 0.0065506, 1.49332, 1.49332, 1.49332),
 "format": 34900799489,
@@ -259,7 +259,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("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")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_u6phd")
+shadow_mesh = SubResource("ArrayMesh_i0vg8")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wosy0"]
 size = Vector3(1.5, 1.5, 1.6)
@@ -296,7 +296,7 @@ resource_name = "cutseen_intro"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_irjxv"]
 _data = {
-"cutseen_intro": SubResource("Animation_25d0v")
+&"cutseen_intro": SubResource("Animation_25d0v")
 }
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_efby1"]
@@ -982,7 +982,7 @@ shape = SubResource("CylinderShape3D_h2etv")
 
 [node name="piston_loop" type="AnimationPlayer" parent="decor"]
 libraries = {
-"": SubResource("AnimationLibrary_qdk1l")
+&"": SubResource("AnimationLibrary_qdk1l")
 }
 autoplay = "loop"
 
@@ -1399,7 +1399,7 @@ flare_hand = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_irjxv")
+&"": SubResource("AnimationLibrary_irjxv")
 }
 
 [node name="PlaywatchCams" type="Node" parent="."]

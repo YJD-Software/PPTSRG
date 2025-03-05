@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c7jw51nkyegxq"]
 
-[ext_resource type="Script" path="res://Maps/Chapter1/video.gd" id="1_fqvv5"]
-[ext_resource type="VideoStream" path="res://Game/Menu/videos/missioncomplete.ogv" id="2_e8jps"]
+[ext_resource type="Script" uid="uid://b133fpvpmh5vq" path="res://Maps/Chapter1/video.gd" id="1_fqvv5"]
+[ext_resource type="VideoStream" uid="uid://vdiqjk6bmroo" path="res://Game/Menu/videos/missioncomplete.ogv" id="2_e8jps"]
 
 [node name="Bootup1" type="Control"]
 layout_mode = 3

@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://ddxeoi30xbw7g"]
 
-[ext_resource type="Script" path="res://Maps/Chapter1/training.gd" id="1_d5ls6"]
+[ext_resource type="Script" uid="uid://boakrkf8hevk6" path="res://Maps/Chapter1/training.gd" id="1_d5ls6"]
 [ext_resource type="PackedScene" uid="uid://wipogv674odr" path="res://Player/player.tscn" id="1_onoxo"]
 [ext_resource type="PackedScene" uid="uid://cu72dk6n7aaco" path="res://Item/Grabpack/grabpack_item.tscn" id="2_pssk4"]
 [ext_resource type="Material" uid="uid://c0exx3n5khu2f" path="res://Textures/wooding/wooding.tres" id="2_vughf"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cn5f8b3834rc" path="res://Puzzle/Levers/lever.tscn" id="11_vfgmu"]
 [ext_resource type="PackedScene" uid="uid://diey8rur80t30" path="res://Puzzle/Turret/starttransition.tscn" id="12_wse7p"]
 [ext_resource type="PackedScene" uid="uid://bwwpyi58q6o0t" path="res://Item/Vhs/vhs_tv.tscn" id="15_ve5ok"]
-[ext_resource type="VideoStream" path="res://Item/Vhs/Video/VHS_3_1k.ogv" id="16_dhrw6"]
+[ext_resource type="VideoStream" uid="uid://dynwcx6d5vlus" path="res://Item/Vhs/Video/VHS_3_1k.ogv" id="16_dhrw6"]
 [ext_resource type="PackedScene" uid="uid://ds0xuh6jlgnl1" path="res://Item/Vhs/vhs_player.tscn" id="18_n3mkx"]
 [ext_resource type="PackedScene" uid="uid://0ityjxe6w7c0" path="res://Item/Vhs/vhs_tape.tscn" id="19_bubgs"]
 [ext_resource type="PackedScene" uid="uid://dbidsa4wtpsi8" path="res://Puzzle/Purple Pad/purple_panel.tscn" id="20_vcwe2"]

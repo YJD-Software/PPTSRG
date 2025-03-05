@@ -1,6 +1,6 @@
 [gd_scene load_steps=26 format=4 uid="uid://bmrugappwco2b"]
 
-[ext_resource type="Script" path="res://Puzzle/Puzzle_Basic/rotating_pillar_pole.gd" id="1_fjkjj"]
+[ext_resource type="Script" uid="uid://bshn8cu15y43h" path="res://Puzzle/Puzzle_Basic/rotating_pillar_pole.gd" id="1_fjkjj"]
 [ext_resource type="Texture2D" uid="uid://cf3bfd5wwwge5" path="res://Puzzle/Model/Ch3_Puzzle1/puzzle_ch3_Image_8.png" id="1_irypt"]
 [ext_resource type="Texture2D" uid="uid://s5x2x6r8mlab" path="res://Puzzle/Model/Ch3_Puzzle1/puzzle_ch3_Image_9.png" id="2_3qe68"]
 [ext_resource type="Texture2D" uid="uid://dhfdpiegielp6" path="res://Puzzle/Model/Ch3_Puzzle1/puzzle_ch3_Image_10.png" id="3_lwc7c"]
@@ -216,8 +216,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fo68b"]
 _data = {
-"RESET": SubResource("Animation_xwbkl"),
-"hit": SubResource("Animation_8hwml")
+&"RESET": SubResource("Animation_xwbkl"),
+&"hit": SubResource("Animation_8hwml")
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kmrs3"]

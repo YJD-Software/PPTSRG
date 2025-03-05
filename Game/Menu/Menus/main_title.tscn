@@ -1,18 +1,18 @@
 [gd_scene load_steps=30 format=3 uid="uid://br24oca6yewg1"]
 
-[ext_resource type="Script" path="res://Game/Menu/Menus/main_title.gd" id="1_1iey1"]
-[ext_resource type="VideoStream" path="res://Game/Menu/Texture/Video/render1.ogv" id="2_f6xkw"]
-[ext_resource type="Shader" path="res://Game/Menu/Shader/vcr_pause.gdshader" id="3_e417y"]
+[ext_resource type="Script" uid="uid://dmgjjsyv3nifs" path="res://Game/Menu/Menus/main_title.gd" id="1_1iey1"]
+[ext_resource type="VideoStream" uid="uid://bmvkysffyvq52" path="res://Game/Menu/Texture/Video/render1.ogv" id="2_f6xkw"]
+[ext_resource type="Shader" uid="uid://blipeeaivhbj3" path="res://Game/Menu/Shader/vcr_pause.gdshader" id="3_e417y"]
 [ext_resource type="AudioStream" uid="uid://c5kjmeb86i1u3" path="res://Game/Menu/theme/whemenu.mp3" id="4_cmuj6"]
 [ext_resource type="Theme" uid="uid://dv4qrnr0ds2w6" path="res://Game/Menu/theme/menu.tres" id="6_m5i1f"]
-[ext_resource type="Script" path="res://Game/Menu/Menus/replay_encounter.gd" id="7_vsx4s"]
-[ext_resource type="Shader" path="res://Game/Menu/Shader/blur.gdshader" id="8_j7jel"]
+[ext_resource type="Script" uid="uid://dh3jjofh66go7" path="res://Game/Menu/Menus/replay_encounter.gd" id="7_vsx4s"]
+[ext_resource type="Shader" uid="uid://det3827vyqibc" path="res://Game/Menu/Shader/blur.gdshader" id="8_j7jel"]
 [ext_resource type="Texture2D" uid="uid://qr7cw85m8s11" path="res://Game/Menu/Texture/ReplayImages/demo_scene.tscn - Grabpack In Godot - Godot Engine 2024-09-08 9_38_53 AM.png" id="9_fd05x"]
-[ext_resource type="Script" path="res://Game/Menu/CustomButtons/replaybutton.gd" id="10_jglre"]
+[ext_resource type="Script" uid="uid://dhh1gx7d3ra5u" path="res://Game/Menu/CustomButtons/replaybutton.gd" id="10_jglre"]
 [ext_resource type="Texture2D" uid="uid://bju8f3r3p6lu4" path="res://Game/Menu/Texture/ReplayImages/demo_scene.tscn - Grabpack In Godot - Godot Engine 2024-09-08 9_54_36 AM.png" id="11_kieh4"]
 [ext_resource type="PackedScene" uid="uid://umft1vb3u8io" path="res://Game/Menu/Menus/settings.tscn" id="12_x6noy"]
 [ext_resource type="PackedScene" uid="uid://bjhse55dlsf0a" path="res://Item/Grabpack/playwatch.tscn" id="13_ghsen"]
-[ext_resource type="Script" path="res://Game/Menu/SFX/btn_sfx.gd" id="13_xot04"]
+[ext_resource type="Script" uid="uid://clunf4fvx618g" path="res://Game/Menu/SFX/btn_sfx.gd" id="13_xot04"]
 [ext_resource type="PackedScene" uid="uid://cux068o67jh01" path="res://Item/Grabpack/Hands/hand_item.tscn" id="14_hh5yh"]
 [ext_resource type="PackedScene" uid="uid://cu72dk6n7aaco" path="res://Item/Grabpack/grabpack_item.tscn" id="15_gbarv"]
 [ext_resource type="PackedScene" uid="uid://bghr8effdjgcs" path="res://Puzzle/Race Car/racecar.tscn" id="16_0ss7l"]
@@ -154,9 +154,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qq4kf"]
 _data = {
-"RESET": SubResource("Animation_t4lfx"),
-"close": SubResource("Animation_k0a6l"),
-"open": SubResource("Animation_e8npk")
+&"RESET": SubResource("Animation_t4lfx"),
+&"close": SubResource("Animation_k0a6l"),
+&"open": SubResource("Animation_e8npk")
 }
 
 [node name="title_screen" type="Control"]
@@ -352,7 +352,6 @@ flat = true
 alignment = 0
 
 [node name="replay_encounter" type="Control" parent="."]
-visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
@@ -509,6 +508,22 @@ script = ExtResource("10_jglre")
 level_path = "res://Level/test.tscn"
 image = ExtResource("11_kieh4")
 
+[node name="level6" type="Button" parent="replay_encounter"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.031
+offset_left = 110.0
+offset_top = 454.0
+offset_right = 390.026
+offset_bottom = 488.0
+theme = ExtResource("6_m5i1f")
+theme_override_font_sizes/font_size = 22
+text = "Test Maps"
+alignment = 0
+script = ExtResource("10_jglre")
+level_path = "res://Game/Menu/Menus/other_title.tscn"
+image = ExtResource("11_kieh4")
+
 [node name="HSeparator" type="HSeparator" parent="replay_encounter"]
 visible = false
 layout_mode = 0
@@ -519,7 +534,7 @@ offset_bottom = 522.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="replay_encounter"]
 libraries = {
-"": SubResource("AnimationLibrary_qq4kf")
+&"": SubResource("AnimationLibrary_qq4kf")
 }
 
 [node name="Settings" parent="." instance=ExtResource("12_x6noy")]

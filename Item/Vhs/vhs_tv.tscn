@@ -1,10 +1,10 @@
 [gd_scene load_steps=14 format=4 uid="uid://bwwpyi58q6o0t"]
 
 [ext_resource type="Texture2D" uid="uid://db4d2n7gqo0w6" path="res://Item/Vhs/Model/vhs_tv_Image_0.png" id="1_377uy"]
-[ext_resource type="Script" path="res://Item/Vhs/vhs_tv.gd" id="1_xbije"]
+[ext_resource type="Script" uid="uid://mahjxyekl7w5" path="res://Item/Vhs/vhs_tv.gd" id="1_xbije"]
 [ext_resource type="Texture2D" uid="uid://j0pvcfry7ch4" path="res://Item/Vhs/Model/vhs_tv_Image_2.png" id="2_5nfro"]
 [ext_resource type="Texture2D" uid="uid://dy61xyox4g1jd" path="res://Item/Vhs/Model/vhs_tv_Image_1.png" id="3_4kavt"]
-[ext_resource type="VideoStream" path="res://Item/Vhs/Video/sample.ogv" id="5_no4oq"]
+[ext_resource type="VideoStream" uid="uid://blgngckukrbd1" path="res://Item/Vhs/Video/sample.ogv" id="5_no4oq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_320cu"]
 resource_name = "MI_TV_B"

@@ -12,7 +12,7 @@ config_version=5
 
 config/name="POPPY PLAYTIME SPEEDRUNNING GAME"
 run/main_scene="res://Game/Menu/Menus/bootup1.tscn"
-config/features=PackedStringArray("4.3")
+config/features=PackedStringArray("4.4")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/image="res://spoonman_rendered.png"
 config/icon="res://icon.svg"
@@ -25,6 +25,7 @@ LoadManagement="*res://Game/Menu/Menus/load_management.gd"
 
 [display]
 
+window/size/resizable=false
 window/stretch/mode="canvas_items"
 
 [dotnet]
@@ -213,4 +214,11 @@ mobile_controls=false
 [rendering]
 
 textures/vram_compression/import_etc2_astc=true
+textures/default_filters/anisotropic_filtering_level=0
+anti_aliasing/quality/msaa_3d=1
+scaling_3d/scale=0.5
+scaling_3d/fsr_sharpness=1.9
+environment/screen_space_reflection/roughness_quality=2
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+anti_aliasing/quality/screen_space_aa=1
+anti_aliasing/quality/use_taa=true

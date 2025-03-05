@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=4 uid="uid://0jm4505rp5fs"]
 
 [ext_resource type="Texture2D" uid="uid://dhetvwltsgxkm" path="res://Puzzle/Model/Ch3_Puzzle1/puzzle_ch3_Image_0.png" id="1_at4by"]
-[ext_resource type="Script" path="res://Puzzle/Puzzle_Basic/power_source.gd" id="1_er22m"]
+[ext_resource type="Script" uid="uid://co7ncw3a0ic1a" path="res://Puzzle/Puzzle_Basic/power_source.gd" id="1_er22m"]
 [ext_resource type="Texture2D" uid="uid://n0exel3j65t7" path="res://Puzzle/Model/Ch3_Puzzle1/puzzle_ch3_Image_1.png" id="2_8kwlu"]
 [ext_resource type="Texture2D" uid="uid://dmnnf68dxpy38" path="res://Puzzle/Model/Ch3_Puzzle1/puzzle_ch3_Image_2.png" id="3_bnmjv"]
 [ext_resource type="AudioStream" uid="uid://wvoihdvwwlax" path="res://Puzzle/Puzzle_Basic/SFX/SFX ConduitSFX hand grab coil.mp3" id="5_7y7bc"]

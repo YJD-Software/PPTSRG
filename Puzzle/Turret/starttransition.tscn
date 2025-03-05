@@ -1,6 +1,6 @@
 [gd_scene load_steps=39 format=4 uid="uid://diey8rur80t30"]
 
-[ext_resource type="Script" path="res://Puzzle/Turret/starttransition.gd" id="1_geun7"]
+[ext_resource type="Script" uid="uid://jdposxcgpvet" path="res://Puzzle/Turret/starttransition.gd" id="1_geun7"]
 [ext_resource type="AudioStream" uid="uid://dpti3iw04blvp" path="res://Puzzle/Turret/SFX/SW_GrabTurret_Possess.wav" id="2_cabci"]
 [ext_resource type="AudioStream" uid="uid://cxvtuy5237s83" path="res://Puzzle/Turret/SFX/SW_GrabTurret_Unpossess_01.wav" id="3_43nw7"]
 [ext_resource type="AudioStream" uid="uid://c5tmu6q4qpqpq" path="res://Puzzle/Turret/SFX/SW_GrabTurret_Unpossess_02.wav" id="4_sa71n"]

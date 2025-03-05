@@ -1,6 +1,6 @@
 [gd_scene load_steps=135 format=4 uid="uid://c3q5y3n2s2evf"]
 
-[ext_resource type="Script" path="res://Character/ColorPlush/minicritter.gd" id="1_i121f"]
+[ext_resource type="Script" uid="uid://crchkcqxabrr7" path="res://Character/ColorPlush/minicritter.gd" id="1_i121f"]
 [ext_resource type="Texture2D" uid="uid://dnddog4tha35p" path="res://Character/ColorPlush/Model/Catnap/catnap_plush_Image_3.png" id="2_8w40f"]
 [ext_resource type="Texture2D" uid="uid://cvlq12cd4iv30" path="res://Character/ColorPlush/Model/Catnap/catnap_plush_Image_5.png" id="3_u5ohx"]
 [ext_resource type="Texture2D" uid="uid://d0iktguopa4yv" path="res://Character/ColorPlush/Model/Catnap/catnap_plush_Image_4.png" id="4_gbwp0"]
@@ -15169,14 +15169,14 @@ tracks/227/keys = PackedFloat32Array(0, 1, 0, 0, 0)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1foks"]
 _data = {
-"RESET": SubResource("Animation_k8ft6"),
-"crawl": SubResource("Animation_5cp0u"),
-"flee": SubResource("Animation_qfuh2"),
-"idle": SubResource("Animation_dhaus"),
-"jumpscare": SubResource("Animation_qi6te"),
-"ref": SubResource("Animation_5s1e1"),
-"scareda": SubResource("Animation_ipwr3"),
-"scareda_corrective": SubResource("Animation_0wec3")
+&"RESET": SubResource("Animation_k8ft6"),
+&"crawl": SubResource("Animation_5cp0u"),
+&"flee": SubResource("Animation_qfuh2"),
+&"idle": SubResource("Animation_dhaus"),
+&"jumpscare": SubResource("Animation_qi6te"),
+&"ref": SubResource("Animation_5s1e1"),
+&"scareda": SubResource("Animation_ipwr3"),
+&"scareda_corrective": SubResource("Animation_0wec3")
 }
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_41rbb"]

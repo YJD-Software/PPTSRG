@@ -1,7 +1,7 @@
 [gd_scene load_steps=330 format=4 uid="uid://wipogv674odr"]
 
-[ext_resource type="Script" path="res://Player/player.gd" id="1_31lgb"]
-[ext_resource type="Script" path="res://Player/item_sway.gd" id="2_g1u5t"]
+[ext_resource type="Script" uid="uid://c0p7cxlclgoti" path="res://Player/player.gd" id="1_31lgb"]
+[ext_resource type="Script" uid="uid://chcn6ybem6rh" path="res://Player/item_sway.gd" id="2_g1u5t"]
 [ext_resource type="Texture2D" uid="uid://dam7e88ils0s3" path="res://Player/grabpack_chapter_3_-_poppy_playtime/textures/MI_GrabpackOriginal_baseColor.png" id="2_wkjif"]
 [ext_resource type="AudioStream" uid="uid://c8e834fgwf8af" path="res://Player/SFX/Grabpack/SW_Grabpack_SwitchHands_02.wav" id="3_0s0st"]
 [ext_resource type="Texture2D" uid="uid://7ujlf70fop4n" path="res://Player/grabpack_chapter_3_-_poppy_playtime/textures/MI_GrabpackOriginal_metallicRoughness.png" id="3_1dayk"]
@@ -96,16 +96,16 @@
 [ext_resource type="Texture2D" uid="uid://vh8ckrrr0fxv" path="res://Player/grabpack3/red_plastic/Plastic007_1K-PNG_Roughness.png" id="85_sodo6"]
 [ext_resource type="Texture2D" uid="uid://bgdqtqpibd570" path="res://Player/UI/Texture/gas_damage.png" id="86_x3ve0"]
 [ext_resource type="FontFile" uid="uid://bcaqbinvnjarr" path="res://Player/UI/Font/VCR_OSD_MONO_1.001.ttf" id="90_2fciv"]
-[ext_resource type="Shader" path="res://Player/UI/Shader/grayscale.gdshader" id="90_bcbfm"]
-[ext_resource type="Shader" path="res://Player/UI/Shader/vhs.gdshader" id="91_5mh6i"]
+[ext_resource type="Shader" uid="uid://l0ulldmfv0ip" path="res://Player/UI/Shader/grayscale.gdshader" id="90_bcbfm"]
+[ext_resource type="Shader" uid="uid://dm1rdaxqj3lve" path="res://Player/UI/Shader/vhs.gdshader" id="91_5mh6i"]
 [ext_resource type="Texture2D" uid="uid://fysiqivq7ruv" path="res://Player/UI/Texture/circle_bg.png" id="91_jhwiy"]
-[ext_resource type="Shader" path="res://Player/UI/Shader/static.gdshader" id="91_qe0iw"]
-[ext_resource type="Shader" path="res://Puzzle/Playwatch Camera/minimap_shader.gdshader" id="92_4asvn"]
+[ext_resource type="Shader" uid="uid://dhpgg3818pc27" path="res://Player/UI/Shader/static.gdshader" id="91_qe0iw"]
+[ext_resource type="Shader" uid="uid://cqkdbkoe1us6p" path="res://Puzzle/Playwatch Camera/minimap_shader.gdshader" id="92_4asvn"]
 [ext_resource type="Theme" uid="uid://dv4qrnr0ds2w6" path="res://Game/Menu/theme/menu.tres" id="92_7vq7j"]
-[ext_resource type="Script" path="res://Puzzle/Playwatch Camera/minimap.gd" id="92_cu4yu"]
+[ext_resource type="Script" uid="uid://bn8ty2smtl4a6" path="res://Puzzle/Playwatch Camera/minimap.gd" id="92_cu4yu"]
 [ext_resource type="AudioStream" uid="uid://d3a8n2lsf0xpg" path="res://Player/SFX/UI/SW_UI_NewObjective.wav" id="93_4ekc1"]
 [ext_resource type="AudioStream" uid="uid://bmjj1iihkes7o" path="res://Player/SFX/UI/SW_TooltipIndicator.wav" id="94_sq6r5"]
-[ext_resource type="Script" path="res://Game/Menu/SFX/btn_sfx.gd" id="95_ar3eb"]
+[ext_resource type="Script" uid="uid://clunf4fvx618g" path="res://Game/Menu/SFX/btn_sfx.gd" id="95_ar3eb"]
 [ext_resource type="PackedScene" uid="uid://c6vk3omy5rumt" path="res://Player/UI/controls.tscn" id="96_576jd"]
 [ext_resource type="PackedScene" uid="uid://cwnki4k556rab" path="res://Game/Menu/Menus/pause.tscn" id="103_43cpq"]
 [ext_resource type="Texture2D" uid="uid://c6d3jsyf0q2w6" path="res://Player/UI/Texture/Mobile/watch_icon.png" id="104_1x8hi"]
@@ -264,9 +264,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oh6ru"]
 _data = {
-"RESET": SubResource("Animation_xhq5j"),
-"jump": SubResource("Animation_3qlfb"),
-"landing": SubResource("Animation_twkgg")
+&"RESET": SubResource("Animation_xhq5j"),
+&"jump": SubResource("Animation_3qlfb"),
+&"landing": SubResource("Animation_twkgg")
 }
 
 [sub_resource type="Animation" id="Animation_uvwq6"]
@@ -1393,20 +1393,20 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_16aaa"]
 _data = {
-"RESET": SubResource("Animation_uvwq6"),
-"crouch": SubResource("Animation_us0j7"),
-"crouch_exit": SubResource("Animation_jxnf7"),
-"fall_loop": SubResource("Animation_v03uv"),
-"grabpack_lower": SubResource("Animation_s3n7i"),
-"grabpack_raise": SubResource("Animation_01gnf"),
-"idle": SubResource("Animation_d67rf"),
-"jump": SubResource("Animation_n8euk"),
-"land": SubResource("Animation_rj156"),
-"stop_to_walk": SubResource("Animation_ocwy6"),
-"switch_pack": SubResource("Animation_2qx7s"),
-"switch_pack_v2": SubResource("Animation_wh2yt"),
-"walk": SubResource("Animation_kpiw5"),
-"walk_to_stop": SubResource("Animation_jna47")
+&"RESET": SubResource("Animation_uvwq6"),
+&"crouch": SubResource("Animation_us0j7"),
+&"crouch_exit": SubResource("Animation_jxnf7"),
+&"fall_loop": SubResource("Animation_v03uv"),
+&"grabpack_lower": SubResource("Animation_s3n7i"),
+&"grabpack_raise": SubResource("Animation_01gnf"),
+&"idle": SubResource("Animation_d67rf"),
+&"jump": SubResource("Animation_n8euk"),
+&"land": SubResource("Animation_rj156"),
+&"stop_to_walk": SubResource("Animation_ocwy6"),
+&"switch_pack": SubResource("Animation_2qx7s"),
+&"switch_pack_v2": SubResource("Animation_wh2yt"),
+&"walk": SubResource("Animation_kpiw5"),
+&"walk_to_stop": SubResource("Animation_jna47")
 }
 
 [sub_resource type="Animation" id="Animation_s3iu0"]
@@ -2726,20 +2726,20 @@ tracks/6/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ypn2a"]
 _data = {
-"RESET": SubResource("Animation_s3iu0"),
-"crouch": SubResource("Animation_rcjby"),
-"crouch_exit": SubResource("Animation_sm0ck"),
-"fall_loop": SubResource("Animation_lklro"),
-"grabpack_lower": SubResource("Animation_qtfjs"),
-"grabpack_raise": SubResource("Animation_xdlw7"),
-"idle": SubResource("Animation_pcxxb"),
-"jump": SubResource("Animation_oexek"),
-"land": SubResource("Animation_35kg8"),
-"stop_to_walk": SubResource("Animation_klf5j"),
-"switch_pack": SubResource("Animation_mhhtc"),
-"switch_pack_v2": SubResource("Animation_1nblc"),
-"walk": SubResource("Animation_q36sp"),
-"walk_to_stop": SubResource("Animation_11pl0")
+&"RESET": SubResource("Animation_s3iu0"),
+&"crouch": SubResource("Animation_rcjby"),
+&"crouch_exit": SubResource("Animation_sm0ck"),
+&"fall_loop": SubResource("Animation_lklro"),
+&"grabpack_lower": SubResource("Animation_qtfjs"),
+&"grabpack_raise": SubResource("Animation_xdlw7"),
+&"idle": SubResource("Animation_pcxxb"),
+&"jump": SubResource("Animation_oexek"),
+&"land": SubResource("Animation_35kg8"),
+&"stop_to_walk": SubResource("Animation_klf5j"),
+&"switch_pack": SubResource("Animation_mhhtc"),
+&"switch_pack_v2": SubResource("Animation_1nblc"),
+&"walk": SubResource("Animation_q36sp"),
+&"walk_to_stop": SubResource("Animation_11pl0")
 }
 
 [sub_resource type="Animation" id="Animation_sm1y2"]
@@ -2801,8 +2801,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jsr6f"]
 _data = {
-"RESET": SubResource("Animation_sm1y2"),
-"loop": SubResource("Animation_sing1")
+&"RESET": SubResource("Animation_sm1y2"),
+&"loop": SubResource("Animation_sing1")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ajtsy"]
@@ -3113,12 +3113,12 @@ tracks/3/keys = PackedFloat32Array(0, 1, 0.999996, -1.23985e-10, -4.41395e-08, 0
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oasoq"]
 _data = {
-"RESET": SubResource("Animation_m1shx"),
-"fire": SubResource("Animation_thqc2"),
-"fire_b": SubResource("Animation_h7gqb"),
-"hit_1": SubResource("Animation_ofc3k"),
-"hit_2": SubResource("Animation_ryc0i"),
-"hit_3": SubResource("Animation_8cmri")
+&"RESET": SubResource("Animation_m1shx"),
+&"fire": SubResource("Animation_thqc2"),
+&"fire_b": SubResource("Animation_h7gqb"),
+&"hit_1": SubResource("Animation_ofc3k"),
+&"hit_2": SubResource("Animation_ryc0i"),
+&"hit_3": SubResource("Animation_8cmri")
 }
 
 [sub_resource type="Animation" id="Animation_w6tht"]
@@ -3410,14 +3410,14 @@ tracks/3/keys = PackedFloat32Array(0, 1, 0.00680561, 0, 0, 0.999977, 0.2, 1, -0.
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_edyus"]
 _data = {
-"RESET": SubResource("Animation_w6tht"),
-"collect_hand": SubResource("Animation_lqw03"),
-"fire": SubResource("Animation_15q8u"),
-"fire_b": SubResource("Animation_avf07"),
-"fire_flare": SubResource("Animation_tbxjo"),
-"hit_1": SubResource("Animation_oriy2"),
-"hit_2": SubResource("Animation_y6d08"),
-"hit_3": SubResource("Animation_epk53")
+&"RESET": SubResource("Animation_w6tht"),
+&"collect_hand": SubResource("Animation_lqw03"),
+&"fire": SubResource("Animation_15q8u"),
+&"fire_b": SubResource("Animation_avf07"),
+&"fire_flare": SubResource("Animation_tbxjo"),
+&"hit_1": SubResource("Animation_oriy2"),
+&"hit_2": SubResource("Animation_y6d08"),
+&"hit_3": SubResource("Animation_epk53")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pxy8s"]
@@ -15237,44 +15237,44 @@ tracks/5/keys = PackedFloat32Array(0, 1, 0.00680561, 0, 0, 0.999977, 0.1, 1, 0.2
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sfyhb"]
 _data = {
-"Armature|A_FirstPersonPlayer_BiggerBodyDog_Jumpscare": SubResource("Animation_bxslc"),
-"Armature|A_FirstPersonPlayer_ColorPlush_Jumpscare": SubResource("Animation_7oj2r"),
-"Armature|A_FirstPersonPlayer_CrouchEnter": SubResource("Animation_r21j1"),
-"Armature|A_FirstPersonPlayer_CrouchExit": SubResource("Animation_w57gl"),
-"Armature|A_FirstPersonPlayer_CrouchPose": SubResource("Animation_yy5l5"),
-"Armature|A_FirstPersonPlayer_Falling": SubResource("Animation_xkvlg"),
-"Armature|A_FirstPersonPlayer_FlashlightOff": SubResource("Animation_574xk"),
-"Armature|A_FirstPersonPlayer_FlashlightOn": SubResource("Animation_5e5yi"),
-"Armature|A_FirstPersonPlayer_GrabpackShootFlare": SubResource("Animation_aeixe"),
-"Armature|A_FirstPersonPlayer_GrabpackShootIn": SubResource("Animation_iwkfr"),
-"Armature|A_FirstPersonPlayer_GrabpackShootOut": SubResource("Animation_gm8bx"),
-"Armature|A_FirstPersonPlayer_HallucinationHuggyJumpscare": SubResource("Animation_gnpnu"),
-"Armature|A_FirstPersonPlayer_HandSwitch": SubResource("Animation_6rw80"),
-"Armature|A_FirstPersonPlayer_Idle": SubResource("Animation_22s7p"),
-"Armature|A_FirstPersonPlayer_Jump": SubResource("Animation_iwmdv"),
-"Armature|A_FirstPersonPlayer_KissyPoppyEncounter01_Tackle": SubResource("Animation_226r7"),
-"Armature|A_FirstPersonPlayer_Land": SubResource("Animation_0b36v"),
-"Armature|A_FirstPersonPlayer_Lower": SubResource("Animation_ig2dl"),
-"Armature|A_FirstPersonPlayer_MovementDirection_Backwards": SubResource("Animation_7hk7r"),
-"Armature|A_FirstPersonPlayer_MovementDirection_Forward": SubResource("Animation_wffrr"),
-"Armature|A_FirstPersonPlayer_MovementDirection_Left": SubResource("Animation_7g26g"),
-"Armature|A_FirstPersonPlayer_MovementDirection_Right": SubResource("Animation_q8vm3"),
-"Armature|A_FirstPersonPlayer_NappyCatDeath_01": SubResource("Animation_r0x5c"),
-"Armature|A_FirstPersonPlayer_NappyCatDeath_02": SubResource("Animation_13s2o"),
-"Armature|A_FirstPersonPlayer_NappyCatNormalJumpscare": SubResource("Animation_u103m"),
-"Armature|A_FirstPersonPlayer_OpeningChuteA": SubResource("Animation_hp4s2"),
-"Armature|A_FirstPersonPlayer_OpeningChuteB": SubResource("Animation_3j4jx"),
-"Armature|A_FirstPersonPlayer_Raise": SubResource("Animation_cpxcl"),
-"Armature|A_FirstPersonPlayer_Run": SubResource("Animation_7gtmx"),
-"Armature|A_FirstPersonPlayer_StandingUp": SubResource("Animation_xtn7o"),
-"Armature|A_FirstPersonPlayer_StandingUp_InitialPose": SubResource("Animation_pvgjk"),
-"Armature|A_FirstPersonPlayer_Teacher_Jumpscare": SubResource("Animation_e86s6"),
-"Armature|A_FirstPersonPlayer_Walk": SubResource("Animation_qj7p8"),
-"Armature|A_FirstPersonPlayer_WalkToStop": SubResource("Animation_e00qa"),
-"Armature|A_FirstPersonPlayer_councilorsoffice": SubResource("Animation_krqro"),
-"RESET": SubResource("Animation_cpyry"),
-"playwatch_off": SubResource("Animation_8a87h"),
-"playwatch_on": SubResource("Animation_la3wc")
+&"Armature|A_FirstPersonPlayer_BiggerBodyDog_Jumpscare": SubResource("Animation_bxslc"),
+&"Armature|A_FirstPersonPlayer_ColorPlush_Jumpscare": SubResource("Animation_7oj2r"),
+&"Armature|A_FirstPersonPlayer_CrouchEnter": SubResource("Animation_r21j1"),
+&"Armature|A_FirstPersonPlayer_CrouchExit": SubResource("Animation_w57gl"),
+&"Armature|A_FirstPersonPlayer_CrouchPose": SubResource("Animation_yy5l5"),
+&"Armature|A_FirstPersonPlayer_Falling": SubResource("Animation_xkvlg"),
+&"Armature|A_FirstPersonPlayer_FlashlightOff": SubResource("Animation_574xk"),
+&"Armature|A_FirstPersonPlayer_FlashlightOn": SubResource("Animation_5e5yi"),
+&"Armature|A_FirstPersonPlayer_GrabpackShootFlare": SubResource("Animation_aeixe"),
+&"Armature|A_FirstPersonPlayer_GrabpackShootIn": SubResource("Animation_iwkfr"),
+&"Armature|A_FirstPersonPlayer_GrabpackShootOut": SubResource("Animation_gm8bx"),
+&"Armature|A_FirstPersonPlayer_HallucinationHuggyJumpscare": SubResource("Animation_gnpnu"),
+&"Armature|A_FirstPersonPlayer_HandSwitch": SubResource("Animation_6rw80"),
+&"Armature|A_FirstPersonPlayer_Idle": SubResource("Animation_22s7p"),
+&"Armature|A_FirstPersonPlayer_Jump": SubResource("Animation_iwmdv"),
+&"Armature|A_FirstPersonPlayer_KissyPoppyEncounter01_Tackle": SubResource("Animation_226r7"),
+&"Armature|A_FirstPersonPlayer_Land": SubResource("Animation_0b36v"),
+&"Armature|A_FirstPersonPlayer_Lower": SubResource("Animation_ig2dl"),
+&"Armature|A_FirstPersonPlayer_MovementDirection_Backwards": SubResource("Animation_7hk7r"),
+&"Armature|A_FirstPersonPlayer_MovementDirection_Forward": SubResource("Animation_wffrr"),
+&"Armature|A_FirstPersonPlayer_MovementDirection_Left": SubResource("Animation_7g26g"),
+&"Armature|A_FirstPersonPlayer_MovementDirection_Right": SubResource("Animation_q8vm3"),
+&"Armature|A_FirstPersonPlayer_NappyCatDeath_01": SubResource("Animation_r0x5c"),
+&"Armature|A_FirstPersonPlayer_NappyCatDeath_02": SubResource("Animation_13s2o"),
+&"Armature|A_FirstPersonPlayer_NappyCatNormalJumpscare": SubResource("Animation_u103m"),
+&"Armature|A_FirstPersonPlayer_OpeningChuteA": SubResource("Animation_hp4s2"),
+&"Armature|A_FirstPersonPlayer_OpeningChuteB": SubResource("Animation_3j4jx"),
+&"Armature|A_FirstPersonPlayer_Raise": SubResource("Animation_cpxcl"),
+&"Armature|A_FirstPersonPlayer_Run": SubResource("Animation_7gtmx"),
+&"Armature|A_FirstPersonPlayer_StandingUp": SubResource("Animation_xtn7o"),
+&"Armature|A_FirstPersonPlayer_StandingUp_InitialPose": SubResource("Animation_pvgjk"),
+&"Armature|A_FirstPersonPlayer_Teacher_Jumpscare": SubResource("Animation_e86s6"),
+&"Armature|A_FirstPersonPlayer_Walk": SubResource("Animation_qj7p8"),
+&"Armature|A_FirstPersonPlayer_WalkToStop": SubResource("Animation_e00qa"),
+&"Armature|A_FirstPersonPlayer_councilorsoffice": SubResource("Animation_krqro"),
+&"RESET": SubResource("Animation_cpyry"),
+&"playwatch_off": SubResource("Animation_8a87h"),
+&"playwatch_on": SubResource("Animation_la3wc")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a4uj8"]
@@ -16341,12 +16341,12 @@ tracks/16/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_evvy1"]
 _data = {
-"RESET": SubResource("Animation_yyiuq"),
-"grab_coil": SubResource("Animation_emgei"),
-"grab_pole": SubResource("Animation_n16lo"),
-"grab_scanner": SubResource("Animation_vt51p"),
-"pull_back": SubResource("Animation_gtpjr"),
-"pull_back_hit": SubResource("Animation_0b80a")
+&"RESET": SubResource("Animation_yyiuq"),
+&"grab_coil": SubResource("Animation_emgei"),
+&"grab_pole": SubResource("Animation_n16lo"),
+&"grab_scanner": SubResource("Animation_vt51p"),
+&"pull_back": SubResource("Animation_gtpjr"),
+&"pull_back_hit": SubResource("Animation_0b80a")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qs1rv"]
@@ -17027,8 +17027,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_84i7f"]
 _data = {
-"RESET": SubResource("Animation_looeo"),
-"charge": SubResource("Animation_ss7bv")
+&"RESET": SubResource("Animation_looeo"),
+&"charge": SubResource("Animation_ss7bv")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pwr8i"]
@@ -19011,12 +19011,12 @@ tracks/44/keys = PackedFloat32Array(0, 1, -0.297063, 0.0771405, 0.563422, 0.7670
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f1rns"]
 _data = {
-"RESET": SubResource("Animation_8b4pu"),
-"grab_coil": SubResource("Animation_4istk"),
-"grab_pole": SubResource("Animation_hik5e"),
-"grab_scanner": SubResource("Animation_fxvtc"),
-"pull_back": SubResource("Animation_g6sun"),
-"pull_back_hit": SubResource("Animation_wy6qh")
+&"RESET": SubResource("Animation_8b4pu"),
+&"grab_coil": SubResource("Animation_4istk"),
+&"grab_pole": SubResource("Animation_hik5e"),
+&"grab_scanner": SubResource("Animation_fxvtc"),
+&"pull_back": SubResource("Animation_g6sun"),
+&"pull_back_hit": SubResource("Animation_wy6qh")
 }
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2ffqb"]
@@ -19238,12 +19238,12 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_frsfq"]
 _data = {
-"RESET": SubResource("Animation_1hoc1"),
-"gas_equip": SubResource("Animation_ioftn"),
-"gas_remove": SubResource("Animation_xj7lr"),
-"watch_disabled": SubResource("Animation_t650d"),
-"watch_enabled": SubResource("Animation_pt5ih"),
-"watch_switch": SubResource("Animation_y22wg")
+&"RESET": SubResource("Animation_1hoc1"),
+&"gas_equip": SubResource("Animation_ioftn"),
+&"gas_remove": SubResource("Animation_xj7lr"),
+&"watch_disabled": SubResource("Animation_t650d"),
+&"watch_enabled": SubResource("Animation_pt5ih"),
+&"watch_switch": SubResource("Animation_y22wg")
 }
 
 [sub_resource type="Animation" id="Animation_friog"]
@@ -19331,9 +19331,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8a0k0"]
 _data = {
-"RESET": SubResource("Animation_friog"),
-"fade_in": SubResource("Animation_lwvrh"),
-"fade_out": SubResource("Animation_hwmqp")
+&"RESET": SubResource("Animation_friog"),
+&"fade_in": SubResource("Animation_lwvrh"),
+&"fade_out": SubResource("Animation_hwmqp")
 }
 
 [sub_resource type="Animation" id="Animation_jnqre"]
@@ -19421,9 +19421,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i6sk5"]
 _data = {
-"RESET": SubResource("Animation_jnqre"),
-"float_in": SubResource("Animation_ix3yv"),
-"float_out": SubResource("Animation_e186j")
+&"RESET": SubResource("Animation_jnqre"),
+&"float_in": SubResource("Animation_ix3yv"),
+&"float_out": SubResource("Animation_e186j")
 }
 
 [sub_resource type="Animation" id="Animation_f35at"]
@@ -19554,8 +19554,8 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jnqvj"]
 _data = {
-"RESET": SubResource("Animation_f35at"),
-"damage": SubResource("Animation_fw1qq")
+&"RESET": SubResource("Animation_f35at"),
+&"damage": SubResource("Animation_fw1qq")
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_71n8x"]

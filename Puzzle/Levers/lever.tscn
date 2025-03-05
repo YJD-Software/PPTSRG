@@ -1,7 +1,7 @@
 [gd_scene load_steps=32 format=4 uid="uid://cn5f8b3834rc"]
 
 [ext_resource type="Texture2D" uid="uid://dnrofduvs1ktq" path="res://Puzzle/Levers/Model/lever_Image_0.png" id="1_mkmh5"]
-[ext_resource type="Script" path="res://Puzzle/Levers/lever.gd" id="1_qwq8n"]
+[ext_resource type="Script" uid="uid://bwrdorgatkkdo" path="res://Puzzle/Levers/lever.gd" id="1_qwq8n"]
 [ext_resource type="Texture2D" uid="uid://dtcumpfskbao1" path="res://Puzzle/Levers/Model/lever_Image_1_3.png" id="2_6vsc7"]
 [ext_resource type="Texture2D" uid="uid://ms5cl3o8gjae" path="res://Puzzle/Levers/Model/lever_Image_2.png" id="3_f0qi4"]
 [ext_resource type="Texture2D" uid="uid://bnywsvscj0x0t" path="res://Puzzle/Levers/Model/lever_Image_3.png" id="4_64ypf"]
@@ -246,9 +246,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k74i1"]
 _data = {
-"RESET": SubResource("Animation_g5y4k"),
-"fail": SubResource("Animation_gljuu"),
-"flip": SubResource("Animation_n3pbf")
+&"RESET": SubResource("Animation_g5y4k"),
+&"fail": SubResource("Animation_gljuu"),
+&"flip": SubResource("Animation_n3pbf")
 }
 
 [node name="Lever" type="StaticBody3D"]

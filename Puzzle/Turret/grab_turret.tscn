@@ -1,6 +1,6 @@
 [gd_scene load_steps=40 format=4 uid="uid://cog1oiwpj12x7"]
 
-[ext_resource type="Script" path="res://Puzzle/Turret/grab_turret.gd" id="1_hkyfs"]
+[ext_resource type="Script" uid="uid://b1nn7mskgrj5l" path="res://Puzzle/Turret/grab_turret.gd" id="1_hkyfs"]
 [ext_resource type="Texture2D" uid="uid://dyu3s7qwgjwg7" path="res://Player/grabpack_chapter_3_-_poppy_playtime/textures/MI_BaseHand_Blue_baseColor.png" id="2_7aixt"]
 [ext_resource type="AudioStream" uid="uid://dpti3iw04blvp" path="res://Puzzle/Turret/SFX/SW_GrabTurret_Possess.wav" id="2_mn3ig"]
 [ext_resource type="AudioStream" uid="uid://cxvtuy5237s83" path="res://Puzzle/Turret/SFX/SW_GrabTurret_Unpossess_01.wav" id="3_1rfkp"]
