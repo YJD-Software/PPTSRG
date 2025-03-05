@@ -1,2 +1,7 @@
 # Normalize EOL for all files that Git considers text files.
 * text=auto eol=lf
+<<<<<<< HEAD
+
+Maps/Chapter1/c1-5.tscn filter=lfs diff=lfs
+=======
+>>>>>>> parent of caefba7 (Update .gitattributes)
