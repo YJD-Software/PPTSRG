@@ -14,14 +14,15 @@ config/name="POPPY PLAYTIME SPEEDRUNNING GAME"
 run/main_scene="res://Game/Menu/Menus/bootup1.tscn"
 config/features=PackedStringArray("4.4")
 boot_splash/bg_color=Color(0, 0, 0, 1)
-boot_splash/image="res://spoonman_rendered.png"
-config/icon="res://icon.svg"
+boot_splash/image="uid://dsj7blhvfeq20"
+config/icon="uid://bkv1irlct3ba0"
 
 [autoload]
 
 Player="*res://Player/player_preload.gd"
 Game="*res://Game/Scripts/playerfunctions.gd"
 LoadManagement="*res://Game/Menu/Menus/load_management.gd"
+multiload="*res://Game/multiload.gd"
 
 [display]
 

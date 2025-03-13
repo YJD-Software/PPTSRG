@@ -1,0 +1,206 @@
+[gd_scene load_steps=12 format=3 uid="uid://ci11jav2n8sah"]
+
+[ext_resource type="Script" uid="uid://cv3y7wtab2yug" path="res://Game/Menu/Menus/multitest.gd" id="1_rnwsj"]
+[ext_resource type="VideoStream" uid="uid://bmvkysffyvq52" path="res://Game/Menu/Texture/Video/render1.ogv" id="2_k0ws0"]
+[ext_resource type="Shader" uid="uid://blipeeaivhbj3" path="res://Game/Menu/Shader/vcr_pause.gdshader" id="3_7tc1t"]
+[ext_resource type="AudioStream" uid="uid://dkpntqt8iqxug" path="res://Game/Menu/SFX/Music/02. Chapter 3 Title Screen.mp3" id="4_xtjgh"]
+[ext_resource type="Texture2D" uid="uid://gbep6gfxosxo" path="res://Game/Menu/Texture/UI_Parts/NewFlare.png" id="5_pu5u1"]
+[ext_resource type="Theme" uid="uid://dv4qrnr0ds2w6" path="res://Game/Menu/theme/menu.tres" id="6_rl08m"]
+[ext_resource type="Script" uid="uid://vvvnq1h3ppdc" path="res://Game/Menu/CustomButtons/replaybutton2.gd" id="9_r82e2"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_gu1im"]
+noise_type = 2
+seed = 1
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_s4m1o"]
+width = 2
+height = 2
+normalize = false
+noise = SubResource("FastNoiseLite_gu1im")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wrrx6"]
+shader = ExtResource("3_7tc1t")
+shader_parameter/curvature = 0.0
+shader_parameter/skip = 0.0
+shader_parameter/image_flicker = 0.04
+shader_parameter/vignette_flicker_speed = 0.0
+shader_parameter/vignette_strength = 0.75
+shader_parameter/small_scanlines_speed = 0.1
+shader_parameter/small_scanlines_proximity = 1.0
+shader_parameter/small_scanlines_opacity = 1.0
+shader_parameter/scanlines_opacity = 1.0
+shader_parameter/scanlines_speed = 0.1
+shader_parameter/scanline_thickness = 0.57
+shader_parameter/scanlines_spacing = 1.0
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_s4m1o")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68e28"]
+expand_margin_top = 1.0
+expand_margin_bottom = 1.0
+
+[node name="title_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rnwsj")
+
+[node name="menu_bg_video" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_k0ws0")
+autoplay = true
+expand = true
+loop = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_wrrx6")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="menu_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_xtjgh")
+volume_db = -15.0
+autoplay = true
+
+[node name="flare" type="Sprite2D" parent="."]
+position = Vector2(254.5, 70)
+scale = Vector2(0.248535, 0.546875)
+texture = ExtResource("5_pu5u1")
+
+[node name="chapter" type="Label" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 59.0
+offset_right = 261.0
+offset_bottom = 83.0
+theme = ExtResource("6_rl08m")
+theme_override_font_sizes/font_size = 27
+text = "Testing"
+vertical_alignment = 1
+uppercase = true
+
+[node name="title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 97.0
+offset_right = 387.0
+offset_bottom = 141.0
+theme = ExtResource("6_rl08m")
+theme_override_font_sizes/font_size = 49
+text = "‘Testing Levels’"
+vertical_alignment = 1
+uppercase = true
+
+[node name="HSeparator" type="HSeparator" parent="."]
+layout_mode = 0
+offset_top = 165.0
+offset_right = 510.0
+offset_bottom = 169.0
+theme = ExtResource("6_rl08m")
+theme_override_constants/separation = 4
+theme_override_styles/separator = SubResource("StyleBoxFlat_68e28")
+
+[node name="description" type="Label" parent="."]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 196.0
+offset_right = 1006.0
+offset_bottom = 307.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("6_rl08m")
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 6
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 36
+text = "This is a Multiplayer Test Menu thingy to let us test multiplayer. say hi"
+
+[node name="version" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 635.0
+offset_right = 88.0
+offset_bottom = 658.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("6_rl08m")
+theme_override_colors/font_color = Color(0.593134, 0.593134, 0.593134, 1)
+theme_override_font_sizes/font_size = 19
+text = "v12/05/24"
+
+[node name="buttons" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.023
+anchor_top = 0.571
+anchor_right = 0.33
+anchor_bottom = 0.931
+offset_left = -26.496
+offset_top = 25.992
+offset_right = -26.16
+offset_bottom = 25.712
+
+[node name="replay" type="Button" parent="buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.031
+offset_left = 54.0
+offset_top = 10.0
+offset_right = 293.026
+offset_bottom = 98.0
+theme = ExtResource("6_rl08m")
+theme_override_font_sizes/font_size = 39
+text = "Host
+"
+
+[node name="settings" type="Button" parent="buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.031
+offset_left = 54.0
+offset_top = 101.0
+offset_right = 293.026
+offset_bottom = 143.0
+theme = ExtResource("6_rl08m")
+theme_override_font_sizes/font_size = 39
+text = "join"
+
+[node name="settings2" type="Button" parent="buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.031
+offset_left = 54.0
+offset_top = 146.0
+offset_right = 293.026
+offset_bottom = 188.0
+theme = ExtResource("6_rl08m")
+theme_override_font_sizes/font_size = 39
+text = "start"
+
+[node name="quit" type="Button" parent="buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.031
+offset_left = 874.0
+offset_top = 212.0
+offset_right = 1135.03
+offset_bottom = 246.0
+theme = ExtResource("6_rl08m")
+theme_override_font_sizes/font_size = 22
+text = "RETURN TO MAIN MENU"
+flat = true
+alignment = 0
+script = ExtResource("9_r82e2")
+level_path = "res://Game/Menu/Menus/main_title.tscn"
+
+[connection signal="pressed" from="buttons/replay" to="." method="_on_replay_pressed"]
+[connection signal="pressed" from="buttons/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="buttons/settings2" to="." method="_on_settings_2_pressed"]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=30 format=3 uid="uid://br24oca6yewg1"]
+[gd_scene load_steps=31 format=3 uid="uid://br24oca6yewg1"]
 
 [ext_resource type="Script" uid="uid://dmgjjsyv3nifs" path="res://Game/Menu/Menus/main_title.gd" id="1_1iey1"]
 [ext_resource type="VideoStream" uid="uid://bmvkysffyvq52" path="res://Game/Menu/Texture/Video/render1.ogv" id="2_f6xkw"]
 [ext_resource type="Shader" uid="uid://blipeeaivhbj3" path="res://Game/Menu/Shader/vcr_pause.gdshader" id="3_e417y"]
 [ext_resource type="AudioStream" uid="uid://c5kjmeb86i1u3" path="res://Game/Menu/theme/whemenu.mp3" id="4_cmuj6"]
 [ext_resource type="Theme" uid="uid://dv4qrnr0ds2w6" path="res://Game/Menu/theme/menu.tres" id="6_m5i1f"]
+[ext_resource type="Script" uid="uid://cxc6f5r4n6hwf" path="res://Game/Menu/Menus/newgame.gd" id="6_qpsen"]
 [ext_resource type="Script" uid="uid://dh3jjofh66go7" path="res://Game/Menu/Menus/replay_encounter.gd" id="7_vsx4s"]
 [ext_resource type="Shader" uid="uid://det3827vyqibc" path="res://Game/Menu/Shader/blur.gdshader" id="8_j7jel"]
 [ext_resource type="Texture2D" uid="uid://qr7cw85m8s11" path="res://Game/Menu/Texture/ReplayImages/demo_scene.tscn - Grabpack In Godot - Godot Engine 2024-09-08 9_38_53 AM.png" id="9_fd05x"]
@@ -350,6 +351,24 @@ theme_override_font_sizes/font_size = 22
 text = "QUIT"
 flat = true
 alignment = 0
+
+[node name="newgame" type="Button" parent="buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00991058
+anchor_top = 0.568646
+anchor_right = 0.0409106
+anchor_bottom = 0.568646
+offset_left = -321.091
+offset_top = -84.5805
+offset_right = -64.065
+offset_bottom = -42.5805
+theme = ExtResource("6_m5i1f")
+theme_override_font_sizes/font_size = 39
+text = "Multiplayer"
+flat = true
+script = ExtResource("6_qpsen")
+game = "res://Game/Menu/Menus/loadmulti.tscn"
 
 [node name="replay_encounter" type="Control" parent="."]
 modulate = Color(1, 1, 1, 0)

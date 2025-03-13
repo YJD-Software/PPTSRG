@@ -22,6 +22,8 @@ extends CharacterBody3D
 @export var WIGGLE_ON_CROUCHING_INTENSITY = 0.05
 var BUNNY_HOP_ACCELERATION = 1000000
 
+var rotation_quat = Quaternion()
+
 #grabpack vars:
 @export_category("Player")
 
@@ -318,8 +320,12 @@ var queue_watch = false
 var prev_poppy = false
 var current_poppy = false
 var walk_anim = false
-
+var pos
+var crouch_state
+var new_rotation
 var jump_time = 0.0
+
+var playermain = true
 
 func _ready():
 	if grabpack_version == 0:
@@ -348,40 +354,40 @@ func _ready():
 		MOUSE_SENS = MOUSE_SENS * 2.0
 	Player.use_mobile = controls.enable_mobile_controls
 
-
 func _input(event):
-	if can_move:
-		if event is InputEventMouseMotion:
-			rotate_y(deg_to_rad(-event.relative.x * MOUSE_SENS))
-			head.rotate_x(deg_to_rad(-event.relative.y * MOUSE_SENS))
-			head.rotation.x = clamp(head.rotation.x, deg_to_rad(-90), deg_to_rad(90))
-	if can_pack:
-		if grabpack_version == 1 and r_hand_locked:
-			if Input.is_action_just_pressed("hand_switch_up"):
-				_switch_hand_up()
-			if Input.is_action_just_pressed("hand_switch_down"):
-				_switch_hand_down()
-			if Input.is_action_just_pressed("1") and red_hand:
-				_switch_hand(1)
-			if Input.is_action_just_pressed("2") and green_hand:
-				_switch_hand(2)
-			if Input.is_action_just_pressed("3") and rocket_hand:
-				_switch_hand(3)
-			if Input.is_action_just_pressed("4") and flare_hand:
-				_switch_hand(4)
-			if Input.is_action_just_pressed("5") and dash_hand:
-				_switch_hand(5)
-	if Input.is_action_just_pressed("mask") and Player.has_mask and can_move:
-		if mask_equipped:
-			_unequip_mask()
-		else:
-			_equip_mask()
-	
-	if mobile_item_sel:
-		Input.action_press("use")
-	
-	if Input.is_action_just_pressed("playwatch") and grabpack_version > 0:
-		_toggle_playwatch()
+	if playermain:
+		if can_move:
+			if event is InputEventMouseMotion:
+				rotate_y(deg_to_rad(-event.relative.x * MOUSE_SENS))
+				head.rotate_x(deg_to_rad(-event.relative.y * MOUSE_SENS))
+				head.rotation.x = clamp(head.rotation.x, deg_to_rad(-90), deg_to_rad(90))
+		if can_pack:
+			if grabpack_version == 1 and r_hand_locked:
+				if Input.is_action_just_pressed("hand_switch_up"):
+					_switch_hand_up()
+				if Input.is_action_just_pressed("hand_switch_down"):
+					_switch_hand_down()
+				if Input.is_action_just_pressed("1") and red_hand:
+					_switch_hand(1)
+				if Input.is_action_just_pressed("2") and green_hand:
+					_switch_hand(2)
+				if Input.is_action_just_pressed("3") and rocket_hand:
+					_switch_hand(3)
+				if Input.is_action_just_pressed("4") and flare_hand:
+					_switch_hand(4)
+				if Input.is_action_just_pressed("5") and dash_hand:
+					_switch_hand(5)
+		if Input.is_action_just_pressed("mask") and Player.has_mask and can_move:
+			if mask_equipped:
+				_unequip_mask()
+			else:
+				_equip_mask()
+		
+		if mobile_item_sel:
+			Input.action_press("use")
+		
+		if Input.is_action_just_pressed("playwatch") and grabpack_version > 0:
+			_toggle_playwatch()
 
 func _physics_process(delta):
 	var input_dir = Input.get_vector("left", "right", "forward", "back")
@@ -687,10 +693,21 @@ func _jump(jump_vel):
 	else:
 		bunny_hop_speed = SPRINTING_SPEED
 
+@rpc("any_peer")
+func set_position_on_clients(pos: Vector3) -> void:
+	position = pos
+func set_crouching_on_clients(crouch_state: bool) -> void:
+	is_crouching = crouch_state
+func update_rotation(new_rotation: Vector3) -> void:
+	rotation_degrees = new_rotation
+
 func _process(delta):
+	if is_multiplayer_authority():
+		rpc("set_position_on_clients", pos)
+		rpc("set_crouching_on_clients", crouch_state)
+		rpc("update_rotation", new_rotation)
 	can_shoot_right = true
 	can_shoot_left = true
-	
 	if gas_damage:
 		if not mask_equipped:
 			if damage == 0.0:
@@ -1639,3 +1656,6 @@ func _on_air_anim_animation_finished(anim_name):
 	if anim_name == "land":
 		if not walk_anim:
 			movement_anim.play("idle")
+			
+func _enter_tree() -> void:
+	set_multiplayer_authority(name.to_int())
